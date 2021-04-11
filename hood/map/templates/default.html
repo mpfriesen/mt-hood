@@ -1,0 +1,342 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mt. Hood National Recreation Area</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4b7b7915d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'map/css/style.css' %}" type='text/css' />
+	<style>
+        
+        .wells-legend tr { line-height: .75em; }
+        .wells-legend td.grade { width: 1em; border-radius: 1em; }
+        .wells-legend table { border-collapse: separate; }
+        .credit { position: absolute; bottom: 15px; font-size: 11px;}
+        .finished { margin-top: 5px; }    	
+        .nitr_grid_switch,.regress_grid_switch { display: none; }
+            	.error-text { font-size: 11px; color: #e00; font-weight: bold;margin-top: 4px; }
+    	.reset-btn { margin-left: 5px; }
+    	#export-file { margin-top: 40px; display: none; }
+    </style>
+</head>
+
+<body>
+  <div>
+    <h1 id="title">Mt. Hood National Recreation Area<h1>
+<!--       <button type="button" class="btn btn-primary aboutbtn" data-toggle="modal" data-target="#AboutModal">About</button></span></h1> -->
+<!--     <nav id="menu"></nav> -->
+
+  </div>
+<!--
+    <div class="right-panels">
+        <form class="layer-checks">
+            <div class="custom-control custom-switch cancer_tracts_switch">
+              <input type="checkbox" class="custom-control-input" data-legend="tract" data-others="" data-layer="cancer_tracts" id="customSwitch1" checked>
+              <label class="custom-control-label" for="customSwitch1">Cancer rates</label>
+            </div>
+            <div class="custom-control custom-switch nitrate_wells_switch">
+              <input type="checkbox" class="custom-control-input" data-legend="wells" data-others="" data-layer="nitrate_wells" id="customSwitch2">
+              <label class="custom-control-label" for="customSwitch2">Nitrate levels</label>
+            </div>
+            <div class="custom-control custom-switch nitr_grid_switch">
+              <input type="checkbox" class="custom-control-input" data-legend="interp" data-others="hide" data-layer="nitr_grid" id="customSwitch3">
+              <label class="custom-control-label" for="customSwitch3">Nitrate grid</label>
+            </div>
+            <div class="custom-control custom-switch regress_grid_switch">
+              <input type="checkbox" class="custom-control-input" data-legend="stdev" data-others="hide" data-layer="regress_grid" id="customSwitch4">
+              <label class="custom-control-label" for="customSwitch4">Regression grid</label>
+            </div>
+        </form>
+        <hr>
+        <div class="legends tract-legend">
+            <h6>Cancer rates</h6>
+            <p>Cancer incidence per 100,000 population by Census tract.</p>
+            <table class="legend">
+                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
+            </table>
+        </div>
+        <div class="legends wells-legend">
+            <h6>Nitrate levels</h6>
+            <p>Nitrate levels found in wells in mg/L. The state and federal drinking water standard is 10 mg/L.</p>
+            <table class="legend">
+                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
+            </table>
+        </div>
+        <div class="legends interp-legend">
+            <h6>Nitrate levels</h6>
+            <p>Nitrate interpolated from well measurements in mg/L. The state and federal drinking water standard is 10 mg/L.</p>
+            <table class="legend">
+                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
+            </table>
+        </div>
+        <div class="legends stdev-legend">
+            <h6>Predicted v. observed rates</h6>
+            <p>The difference in each area between the predicted cancer rate and the observed rate in standard deviations.</p>
+            <table class="legend">
+                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
+                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
+            </table>
+            <div class="regression"></div>
+        </div>
+    </div>
+-->
+
+    <div id='map'>
+    </div>
+
+
+<!--
+        <div class="left-panels left-top">
+            <div id="overview">
+                
+              <h6>Analyze the data</h6>
+              <p>Enter a hexbin size and a distance decay coefficient (between 1.5 and 2.5 is recommended) to see where high incidences of cancer may align geographically with high levels of nitrate found in wells. Note: the smaller the hexbin size, the longer the grid will take to render; 10 is recommended. </p>
+                <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-sm" onkeypress="return isValid(this,event)" id="hexbin_size" aria-describedby="emailHelp" placeholder="Hexbin size (km.)">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control form-control-sm" onkeypress="return isValid(this,event)" id="coeff" placeholder="Coefficient">
+                    <div class="error-text"></div>
+                  </div>
+                  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                   <button type="button" data-layer="grid-btn" class="btn btn-sm btn-secondary gridbtn">Submit</button>
+                   <button type="button" data-layer="reset-btn" class="btn btn-sm btn-secondary reset-btn disabled">Reset</button>
+                  </div>
+                </form>
+                <div id="export-file">
+                    <p>Export grid file as GeoJSON</p>
+                    <a href="#" id="export"><button type="button" data-layer="export-btn" class="btn btn-sm btn-secondary export-btn">Export</button></a>
+                    <p class="finished"></p>
+                </div>
+            </div>
+            <div class='credit'>Map designed and programmed by Mark Friesen</div>
+        </div>
+-->
+
+        <!-- Modal -->
+        <div class="modal fade" id="AboutModal" tabindex="-1" role="dialog" aria-labelledby="About" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="AboutRedlining">About this map</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Is there a relationship between nitrate levels in drinking water and cancer incidence in Wisconsin? At right is a map of cancer incidence rates per 100,000 by Census tract. If you click on the "Nitrate levels" button, you'll see what nitrate levels have been found at wells throughout the state. In order to find out if there may be a connection, we need to interpolate the well nitrate data to create a statewide surface grid of nitrate values. We then match that with a similar grid of interpolated cancer incidence values to come up with predicted cancer values. We then run a regression analysis on the predicted and observed cancer values to see how the model performs.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!--scripts-->
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--     <script src="js/main.js" type="text/javascript"></script> -->
+    <script>
+
+
+        function addCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        
+        //validation function that prevents non-numerical characters being input in input field
+        function isValid(el, evnt) { 
+            var charC = (evnt.which) ? evnt.which : evnt.keyCode; 
+            if (charC == 46) { 
+                if (el.value.indexOf('.') === -1) { 
+                    return true; 
+                } else { 
+                    return false; 
+                } 
+            } else { 
+                if (charC > 31 && (charC < 48 || charC > 57)) 
+                    return false; 
+            } 
+            return true; 
+        } 
+        
+        
+        
+        //resets map back to load state
+        function resetMap() {
+            removeGrids();
+            $('.layer-checks input').prop("checked", false);
+            $('.legends,.nitr_grid_switch,.regress_grid_switch,#export-file').hide();
+            $('#hexbin_size,#coeff').val('')
+            map.fitBounds([[-92.75,42.4],[-86.86,47]], {padding: {top: 100, bottom: 0, left: 200, right: 200} });
+            map.setLayoutProperty('nitrate_wells', 'visibility', 'none');
+            map.setLayoutProperty('cancer_tracts', 'visibility', 'visible');
+            $('.cancer_tracts_switch input').prop( "checked", true );
+            $('.tract-legend').show();
+            $('.reset-btn').addClass('disabled');
+        }
+        
+        
+        
+        
+        var tract_canrate = [],
+            well_nitrate = [],
+            reds = ['#fef0d9','#fdcc8a','#fc8d59','#e34a33','#b30000'],
+            orPu = ['#e66101','#fdb863','#f7f7f7','#b2abd2','#5e3c99'],
+            blues = ['#ffffcc','#a1dab4','#41b6c4','#2c7fb8','#253494'],
+            devs = ['< -2 Std. Dev.', '-2 Std. Dev. - -1 Std. Dev.', '-1 Std. Dev. - 1 Std. Dev.', '1 Std. Dev. - 2 Std. Dev.', '> 2 Std. Dev.'];
+        
+        
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/trailsx.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                traildata = data;
+        /*
+                $.each(data.features, function(k, v) {
+                    tract_canrate.push(v.properties.canrate);
+                })
+        */
+             }
+        });
+        
+        mapbox_path = "mapbox://mfriesenwisc.";
+        
+        mapboxgl.accessToken = 'pk.eyJ1IjoibWZyaWVzZW53aXNjIiwiYSI6ImNqenhjcjAzYjBlc3QzbmtpODI1YXZxNmgifQ.Zz-z-Ykof8NbNaQOdR6ouQ';
+        var map = new mapboxgl.Map({
+          container: 'map', // container id
+          style: 'mapbox://styles/mfriesenwisc/ckn6sea6s0ikw17p90rswvxf7',
+          zoom: 3
+        });
+        map.fitBounds([[-121.79,45.32],[-121.59,45.42]]);
+        
+        var nav = new mapboxgl.NavigationControl({showCompass:false});
+        map.addControl(nav,'top-left');
+        var geoloc = new mapboxgl.GeolocateControl({
+                positionOptions: {
+                    enableHighAccuracy: true
+                },
+                trackUserLocation: true
+            });
+        map.addControl(geoloc,'top-left'); 
+        
+        
+        
+        map.on('load',function() {
+            var maplayers = map.getStyle().layers;
+            
+            
+            
+            map.on('click', function(e) {
+                var coordinates = e.lngLat;
+                console.log(coordinates);
+            })
+            
+            //add geojson data as source for map layers
+            map.addSource('trails', {
+                'type': 'geojson',
+                'data': traildata,
+                'generateId': true
+            });
+        
+        
+            //add different map layers
+        
+            map.addLayer({
+                'id': 'trails',
+                'type': 'line',
+                'source': 'trails',
+                'layout': {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                'paint': {
+                    'line-color': 'forestgreen',
+                    'line-width': 1
+                }
+            })
+            
+        
+            // make a pointer cursor
+            map.getCanvas().style.cursor = 'default';
+           
+        
+            //Code for layer toggle
+            $(".layer-checks").show();
+            $(".layer-checks input").on("change",function(e) {
+                var thisLayer = $(this).data("layer");
+                var thisLegend = $(this).data("legend");
+                var thisHide = $(this).data("others");
+                if (thisHide=='hide') {
+                    $('.legends').hide();
+                    $.each(layers,function(k,v) {
+                       map.setLayoutProperty(v, 'visibility', 'none'); 
+                    })
+                    $('.layer-checks input').prop("checked", false);
+                    $('.'+thisLayer+'_switch input').prop("checked", true);
+                    map.setLayoutProperty(thisLayer, 'visibility', 'visible');
+                }
+                if (e.target.checked) {
+                    $("."+thisLegend+"-legend").show();
+                } else {
+                    $("."+thisLegend+"-legend").hide();
+                }
+                
+                map.setLayoutProperty(
+                    thisLayer,
+                    'visibility',
+                    e.target.checked ? 'visible' : 'none'
+                );
+            })
+        
+        
+        
+        
+        
+        
+        
+        })
+                
+        
+                 
+            
+            
+        
+
+    
+    
+    
+    
+    </script>
+</body>
+
+</html>
