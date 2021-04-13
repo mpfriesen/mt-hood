@@ -13,153 +13,77 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=PT+Sans+Narrow:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/4b7b7915d1.js" crossorigin="anonymous"></script>
+    <script src='https://unpkg.com/@turf/turf@6.3.0/turf.min.js'></script>
     <link rel="stylesheet" href="{% static 'map/css/style.css' %}" type='text/css' />
 	<style>
-        
-        .wells-legend tr { line-height: .75em; }
-        .wells-legend td.grade { width: 1em; border-radius: 1em; }
-        .wells-legend table { border-collapse: separate; }
+    	#map h1 { display: none; }
+    	h2 { margin-top: 30px; }
         .credit { position: absolute; bottom: 15px; font-size: 11px;}
         .finished { margin-top: 5px; }    	
         .nitr_grid_switch,.regress_grid_switch { display: none; }
-            	.error-text { font-size: 11px; color: #e00; font-weight: bold;margin-top: 4px; }
+        .error-text { font-size: 11px; color: #e00; font-weight: bold;margin-top: 4px; }
     	.reset-btn { margin-left: 5px; }
     	#export-file { margin-top: 40px; display: none; }
+    	.death_hed { font-weight: 700; text-transform: uppercase;}
+    	.pop { margin: 30px 0 5px; }
+    	.poptext { background-color: #ddd; padding: 5px 15px 15px; border-top: 3px solid #000; }
+    	.poptext.deaths { border-top-color: #900; }
+    	.poptext.trailheads { border-top-color: #6d501b; }
+    	.poptext.snopark { border-top-color: #177dd1; }
+    	.poptext.camping { border-top-color: forestgreen; }
+    	.kicker { font-family: 'Playfair Display',serif; text-transform: uppercase; font-weight: 900; color: #888; margin-bottom: 8px; }
+    	.layerbutt { font-weight: 700; opacity: .4;  }
+    	.layerbutt:hover { cursor: pointer; opacity: 1; }
+    	.layerbutt.active { opacity: 1; }
+    	.legendline,.legendcirc { display: inline-block; margin-right: 8px;   }
+    	.legendline { width: 40px; border-bottom: 2px dashed #900; vertical-align: middle; }
+    	.legendcirc { width: 10px; height: 10px; background-color: #900; border-radius: 6px; vertical-align: 3%; }
+    	.legendcirc.snopark { background-color: #177dd1;}
+    	.legendcirc.camping { background-color: forestgreen;}
+    	.legendcirc.trailheads { background-color: #6d501b; }
+    	.legendline.nordic,.legendline.downhill { border-bottom-color: #177dd1 }
+    	.legendline.downhill { border-bottom-style: solid; border-bottom-width: 1px; }
+    	.infoblock { display: none; }
+    	.reset { font-size: 80%; margin-top: 10px; }
+    	.reset span { font-weight: bold; text-transform: uppercase; background-color: #900; padding: 1px 4px; color: #eee; }
+    	.reset span:hover { cursor: pointer; background-color: #600; }
+    	
+    	@media only screen and (max-width: 575px) {
+        	#map { height: 65vh; }
+        	#map h1 { display:block; position: absolute; top: 10px; left: 10px; font-size: 30px; z-index: 3; }
+        	#title { font-size: 25px; }
+        	.infobox { padding: 30px; height: 35vh; }
+        	.infoblock h1,.infoblock p.guff { display: none; }
+    	}
     </style>
 </head>
 
 <body>
-  <div>
-    <h1 id="title">Mt. Hood National Recreation Area<h1>
-<!--       <button type="button" class="btn btn-primary aboutbtn" data-toggle="modal" data-target="#AboutModal">About</button></span></h1> -->
-<!--     <nav id="menu"></nav> -->
-
-  </div>
-<!--
-    <div class="right-panels">
-        <form class="layer-checks">
-            <div class="custom-control custom-switch cancer_tracts_switch">
-              <input type="checkbox" class="custom-control-input" data-legend="tract" data-others="" data-layer="cancer_tracts" id="customSwitch1" checked>
-              <label class="custom-control-label" for="customSwitch1">Cancer rates</label>
-            </div>
-            <div class="custom-control custom-switch nitrate_wells_switch">
-              <input type="checkbox" class="custom-control-input" data-legend="wells" data-others="" data-layer="nitrate_wells" id="customSwitch2">
-              <label class="custom-control-label" for="customSwitch2">Nitrate levels</label>
-            </div>
-            <div class="custom-control custom-switch nitr_grid_switch">
-              <input type="checkbox" class="custom-control-input" data-legend="interp" data-others="hide" data-layer="nitr_grid" id="customSwitch3">
-              <label class="custom-control-label" for="customSwitch3">Nitrate grid</label>
-            </div>
-            <div class="custom-control custom-switch regress_grid_switch">
-              <input type="checkbox" class="custom-control-input" data-legend="stdev" data-others="hide" data-layer="regress_grid" id="customSwitch4">
-              <label class="custom-control-label" for="customSwitch4">Regression grid</label>
-            </div>
-        </form>
-        <hr>
-        <div class="legends tract-legend">
-            <h6>Cancer rates</h6>
-            <p>Cancer incidence per 100,000 population by Census tract.</p>
-            <table class="legend">
-                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
-            </table>
+    <div class="row top-row">
+        <div class="col-sm-8 col-md-9">
+            <div id='map'><h1>Mt. Hood National Recreation Area</h1></div>
         </div>
-        <div class="legends wells-legend">
-            <h6>Nitrate levels</h6>
-            <p>Nitrate levels found in wells in mg/L. The state and federal drinking water standard is 10 mg/L.</p>
-            <table class="legend">
-                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
-            </table>
-        </div>
-        <div class="legends interp-legend">
-            <h6>Nitrate levels</h6>
-            <p>Nitrate interpolated from well measurements in mg/L. The state and federal drinking water standard is 10 mg/L.</p>
-            <table class="legend">
-                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
-            </table>
-        </div>
-        <div class="legends stdev-legend">
-            <h6>Predicted v. observed rates</h6>
-            <p>The difference in each area between the predicted cancer rate and the observed rate in standard deviations.</p>
-            <table class="legend">
-                <tr class="class_0"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_1"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_2"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_3"><td class="grade"></td><td class="desire"></td></tr>
-                <tr class="class_4"><td class="grade"></td><td class="desire"></td></tr>
-            </table>
-            <div class="regression"></div>
+        <div class="infobox col-sm-4 col-md-3">
+            <div class="infoblock">
+                <h1>Mt. Hood National Recreation Area</h1>
+                <p class="guff">The Mount Hood National Recreation Area is a 34,550-acre protected area within Mount Hood National Forest in Oregon. Established on March 30, 2009, by the Omnibus Public Land Management Act of 2009, the national recreation area is managed by the U.S. Forest Service. Click below to see features of the area on the map. Hovering over a line will give you the trail or ski run name. Clicking on a point will show more information in the box below.</p>
+                <div data-layer="climbing" class="layerbutt climbing active"><div class="legendline climbing"></div> <span>Hide</span> climbing routes </div>
+                <div data-layer="nordic" class="layerbutt nordic"><div class="legendline nordic"></div> <span>Show</span> Nordic trails </div>
+                <div data-layer="downhill" class="layerbutt downhill"><div class="legendline downhill"></div> <span>Show</span> downhill runs </div>
+                <div data-layer="snopark" class="layerbutt snopark"><div class="legendcirc snopark"></div> <span>Show</span> Sno-Park areas</div>
+                <div data-layer="trailheads" class="layerbutt trailheads"><div class="legendcirc trailheads"></div> <span>Show</span> trailheads</div>
+                <div data-layer="camping" class="layerbutt camping"><div class="legendcirc camping"></div> <span>Show</span> camping</div>
+                <div data-layer="deaths" class="layerbutt deaths"><div class="legendcirc deaths"></div> <span>Show</span> deaths</div>
+                <div class="reset"><span>Reset map</span></div>
+                <div class="pop"></div>
+                <h2>Send us a photo!</h2>
+                <p>Have a photo of your Mt. Hood adventure? Send it to us! <a href='upload/'>Give us your name, email address and where you took it and we may publish it.</a></p>
+            </div>
         </div>
     </div>
--->
 
-    <div id='map'>
-    </div>
-
-
-<!--
-        <div class="left-panels left-top">
-            <div id="overview">
-                
-              <h6>Analyze the data</h6>
-              <p>Enter a hexbin size and a distance decay coefficient (between 1.5 and 2.5 is recommended) to see where high incidences of cancer may align geographically with high levels of nitrate found in wells. Note: the smaller the hexbin size, the longer the grid will take to render; 10 is recommended. </p>
-                <form>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-sm" onkeypress="return isValid(this,event)" id="hexbin_size" aria-describedby="emailHelp" placeholder="Hexbin size (km.)">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control form-control-sm" onkeypress="return isValid(this,event)" id="coeff" placeholder="Coefficient">
-                    <div class="error-text"></div>
-                  </div>
-                  <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-                   <button type="button" data-layer="grid-btn" class="btn btn-sm btn-secondary gridbtn">Submit</button>
-                   <button type="button" data-layer="reset-btn" class="btn btn-sm btn-secondary reset-btn disabled">Reset</button>
-                  </div>
-                </form>
-                <div id="export-file">
-                    <p>Export grid file as GeoJSON</p>
-                    <a href="#" id="export"><button type="button" data-layer="export-btn" class="btn btn-sm btn-secondary export-btn">Export</button></a>
-                    <p class="finished"></p>
-                </div>
-            </div>
-            <div class='credit'>Map designed and programmed by Mark Friesen</div>
-        </div>
--->
-
-        <!-- Modal -->
-        <div class="modal fade" id="AboutModal" tabindex="-1" role="dialog" aria-labelledby="About" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="AboutRedlining">About this map</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <p>Is there a relationship between nitrate levels in drinking water and cancer incidence in Wisconsin? At right is a map of cancer incidence rates per 100,000 by Census tract. If you click on the "Nitrate levels" button, you'll see what nitrate levels have been found at wells throughout the state. In order to find out if there may be a connection, we need to interpolate the well nitrate data to create a statewide surface grid of nitrate values. We then match that with a similar grid of interpolated cancer incidence values to come up with predicted cancer values. We then run a regression analysis on the predicted and observed cancer values to see how the model performs.</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-  <!--scripts-->
-  
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -188,46 +112,112 @@
         } 
         
         
-        
-        //resets map back to load state
-        function resetMap() {
-            removeGrids();
-            $('.layer-checks input').prop("checked", false);
-            $('.legends,.nitr_grid_switch,.regress_grid_switch,#export-file').hide();
-            $('#hexbin_size,#coeff').val('')
-            map.fitBounds([[-92.75,42.4],[-86.86,47]], {padding: {top: 100, bottom: 0, left: 200, right: 200} });
-            map.setLayoutProperty('nitrate_wells', 'visibility', 'none');
-            map.setLayoutProperty('cancer_tracts', 'visibility', 'visible');
-            $('.cancer_tracts_switch input').prop( "checked", true );
-            $('.tract-legend').show();
-            $('.reset-btn').addClass('disabled');
-        }
-        
-        
-        
-        
-        var tract_canrate = [],
-            well_nitrate = [],
-            reds = ['#fef0d9','#fdcc8a','#fc8d59','#e34a33','#b30000'],
-            orPu = ['#e66101','#fdb863','#f7f7f7','#b2abd2','#5e3c99'],
-            blues = ['#ffffcc','#a1dab4','#41b6c4','#2c7fb8','#253494'],
-            devs = ['< -2 Std. Dev.', '-2 Std. Dev. - -1 Std. Dev.', '-1 Std. Dev. - 1 Std. Dev.', '1 Std. Dev. - 2 Std. Dev.', '> 2 Std. Dev.'];
-        
-        
         $.ajax({
             type: 'GET',
             async: false,
-            url: "{% static 'map/json/trailsx.geojson' %}",
+            url: "{% static 'map/json/trails.geojson' %}",
             dataType: 'json',
             success: function (data) {
                 traildata = data;
-        /*
-                $.each(data.features, function(k, v) {
-                    tract_canrate.push(v.properties.canrate);
-                })
-        */
              }
         });
+
+        $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/deaths.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                deathdata = data;
+             }
+        });
+
+         $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/recpoint.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                recdata = data;
+             }
+        });
+
+       $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/climbing.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                climbing = data;
+             }
+        });
+
+       $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/snopark.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                snopark = data;
+             }
+        });
+
+       $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/nordic.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                nordic = data;
+             }
+        });
+
+       $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/downhill_skiing.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                downhill = data;
+             }
+        });
+
+       $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/hiking.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                hiking = data;
+             }
+        });
+       $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/trailheads.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                trailheads = data;
+             }
+        });
+
+       $.ajax({
+            type: 'GET',
+            async: false,
+            url: "{% static 'map/json/camping.geojson' %}",
+            dataType: 'json',
+            success: function (data) {
+                camping = data;
+             }
+        });
+
+
+        var bboxes = { "trailheads": turf.bbox(trailheads), "snopark": turf.bbox(snopark), "deaths": turf.bbox(deathdata), "climbing": turf.bbox(climbing), "nordic": turf.bbox(nordic), "downhill": turf.bbox(downhill), "hiking": turf.bbox(hiking), "camping": turf.bbox(camping) };
+
+        var startbounds = [[-121.75,45.32],[-121.65,45.42]];
+
+
+
         
         mapbox_path = "mapbox://mfriesenwisc.";
         
@@ -235,31 +225,37 @@
         var map = new mapboxgl.Map({
           container: 'map', // container id
           style: 'mapbox://styles/mfriesenwisc/ckn6sea6s0ikw17p90rswvxf7',
-          zoom: 3
+          center: [-121.69654868396884,45.373522141367374],
+          zoom: 9
         });
-        map.fitBounds([[-121.79,45.32],[-121.59,45.42]]);
+        map.fitBounds(startbounds);
         
         var nav = new mapboxgl.NavigationControl({showCompass:false});
-        map.addControl(nav,'top-left');
+        map.addControl(nav,'top-right');
         var geoloc = new mapboxgl.GeolocateControl({
                 positionOptions: {
                     enableHighAccuracy: true
                 },
                 trackUserLocation: true
             });
-        map.addControl(geoloc,'top-left'); 
+        map.addControl(geoloc,'top-right'); 
+        let hoveredStateId = null;
+        let highlightedFeatures = null;
         
         
+        $(".reset").on('click',function() {
+            map.fitBounds(startbounds);
+            $(".pop").html("");
+
+        })
+
+
         
         map.on('load',function() {
             var maplayers = map.getStyle().layers;
+            $(".infoblock").show();
             
-            
-            
-            map.on('click', function(e) {
-                var coordinates = e.lngLat;
-                console.log(coordinates);
-            })
+/* :::::::::TRAILS LAYER:::::::::  */
             
             //add geojson data as source for map layers
             map.addSource('trails', {
@@ -269,13 +265,14 @@
             });
         
         
-            //add different map layers
+            //add all trails layer
         
             map.addLayer({
                 'id': 'trails',
                 'type': 'line',
                 'source': 'trails',
                 'layout': {
+                    'visibility': 'none',
                     'line-join': 'round',
                     'line-cap': 'round'
                 },
@@ -285,45 +282,1029 @@
                 }
             })
             
+
+
+            map.on('mouseenter', 'trails', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+            
+
+/* :::::::::CLIMBING LAYER:::::::::  */
+            
+            //add geojson data as source for map layers
+            map.addSource('climbing', {
+                'type': 'geojson',
+                'data': climbing,
+                'generateId': true
+            });
+        
+        
+            //add climbing layer
+        
+            map.addLayer({
+                'id': 'climbing',
+                'type': 'line',
+                'source': 'climbing',
+                'layout': {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                'paint': {
+                    'line-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#000',
+                        '#900'
+                    ],
+                    'line-opacity': .8,
+                    'line-dasharray': [2,4],
+                    'line-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        3,
+                        1
+                    ],
+                }
+            })
+            
+//             TRAILNAME POPUP ON HOVER
+
+            var climbpop = new mapboxgl.Popup({
+                closeButton: false,
+                closeOnClick: false
+            })
+            map.on('mouseenter', 'climbing', function (e) {
+                map.getCanvas().style.cursor = 'pointer';
+                climbpop.setLngLat(e.lngLat)
+                  .setHTML("<strong>"+e.features[0].properties.trail_name+"</strong>")
+                  .addTo(map)
+            })
+ 
+            map.on('mousemove', 'climbing', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'climbing', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'climbing', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+            
+            map.on('mouseleave', 'climbing', function () {
+                map.getCanvas().style.cursor = '';
+                climbpop.remove();
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'climbing', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+
+
+/* :::::::::NORDIC LAYER:::::::::  */
+            
+            //add geojson data as source for map layers
+            map.addSource('nordic', {
+                'type': 'geojson',
+                'data': nordic,
+                'generateId': true
+            });
+        
+        
+            //add nordic layer
+        
+            map.addLayer({
+                'id': 'nordic',
+                'type': 'line',
+                'source': 'nordic',
+                'layout': {
+                    'visibility': 'none',
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                'paint': {
+                    'line-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#666',
+                        '#177dd1'
+                    ],
+                    'line-opacity': .8,
+                    'line-dasharray': [2,4],
+                    'line-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        3,
+                        1.5
+                    ],
+                }
+            })
+            
+//             NORDIC TRAILNAME POPUP ON HOVER
+
+            var climbpop = new mapboxgl.Popup({
+                closeButton: false,
+                closeOnClick: false
+            })
+            map.on('mouseenter', 'nordic', function (e) {
+                map.getCanvas().style.cursor = 'pointer';
+                climbpop.setLngLat(e.lngLat)
+                  .setHTML("<strong>"+e.features[0].properties.trail_name+"</strong>")
+                  .addTo(map)
+            })
+ 
+            map.on('mousemove', 'nordic', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'nordic', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'nordic', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+            
+            map.on('mouseleave', 'nordic', function () {
+                map.getCanvas().style.cursor = '';
+                climbpop.remove();
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'nordic', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+
+
+
+/* :::::::::DOWNHILL LAYER:::::::::  */
+            
+            //add geojson data as source for map layers
+            map.addSource('downhill', {
+                'type': 'geojson',
+                'data': downhill,
+                'generateId': true
+            });
+        
+        
+            //add downhill layer
+        
+            map.addLayer({
+                'id': 'downhill',
+                'type': 'line',
+                'source': 'downhill',
+                'layout': {
+                    'visibility': 'none',
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                'paint': {
+                    'line-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#666',
+                        '#177dd1'
+                    ],
+                    'line-opacity': .8,
+                    'line-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        2,
+                        1
+                    ],
+                }
+            })
+            
+//             DOWNHILL TRAILNAME POPUP ON HOVER
+
+            var climbpop = new mapboxgl.Popup({
+                closeButton: false,
+                closeOnClick: false
+            })
+            map.on('mouseenter', 'downhill', function (e) {
+                map.getCanvas().style.cursor = 'pointer';
+                climbpop.setLngLat(e.lngLat)
+                  .setHTML("<strong>"+e.features[0].properties.trail_name+"</strong>")
+                  .addTo(map)
+            })
+ 
+            map.on('mousemove', 'downhill', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'downhill', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'downhill', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+            
+            map.on('mouseleave', 'downhill', function () {
+                map.getCanvas().style.cursor = '';
+                climbpop.remove();
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'downhill', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+
+/* :::::::::HIKING LAYER:::::::::  */
+            
+            //add geojson data as source for map layers
+            map.addSource('hiking', {
+                'type': 'geojson',
+                'data': hiking,
+                'generateId': true
+            });
+        
+        
+            //add nordic layer
+        
+            map.addLayer({
+                'id': 'hiking',
+                'type': 'line',
+                'source': 'hiking',
+                'layout': {
+                    'visibility': 'none',
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                'paint': {
+                    'line-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#666',
+                        '#b27b16'
+                    ],
+                    'line-opacity': .8,
+                    'line-dasharray': [2,4],
+                    'line-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        3,
+                        1.5
+                    ],
+                }
+            })
+            
+//             HIKING TRAILNAME POPUP ON HOVER
+
+            var climbpop = new mapboxgl.Popup({
+                closeButton: false,
+                closeOnClick: false
+            })
+            map.on('mouseenter', 'hiking', function (e) {
+                map.getCanvas().style.cursor = 'pointer';
+                climbpop.setLngLat(e.lngLat)
+                  .setHTML("<strong>"+e.features[0].properties.trail_name+"</strong>")
+                  .addTo(map)
+            })
+ 
+            map.on('mousemove', 'hiking', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'hiking', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'hiking', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            });
+            
+            map.on('mouseleave', 'hiking', function () {
+                map.getCanvas().style.cursor = '';
+                climbpop.remove();
+                if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'hiking', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+            });
+
+
+/* :::::::::TRAILHEADS LAYER:::::::::  */
+
+            map.addSource('trailheads', {
+                'type': 'geojson',
+                'data': trailheads
+            });
+            //add recpoints layer
+        
+            map.addLayer({
+                'id': 'trailheads',
+                'type': 'circle',
+                'source': 'trailheads',
+                'layout': {
+                    'visibility': 'none',
+                },
+                'paint': {
+                    'circle-radius': {
+                        'base': 4,
+                        'stops': [
+                            [12, 4.5],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-stroke-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#000',
+                        '#fff'
+                    ],
+                    'circle-stroke-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        2,
+                        1
+                    ],
+                    'circle-color': '#6d501b'
+                }
+            })
+
+            //add recpoints highlight layer
+
+            map.addLayer({
+                'id': 'trailheads-highlight',
+                'type': 'circle',
+                'source': 'trailheads',
+                'layout': {
+                    'visibility': 'none',
+                },
+                'paint': {
+                    'circle-radius': {
+                        'base': 6,
+                        'stops': [
+                            [12, 6],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-stroke-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        '#000',
+                        '#fff'
+                    ],
+                    'circle-stroke-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        2,
+                        0
+                    ],
+                    'circle-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        '#b27b16',
+                        'rgba(255,255,255,0)'
+                    ]
+                }
+            })
+
+            //click and mouse functions for recpoint info popup and marker highlight
+
+
+            map.on('click','trailheads-highlight', function(e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+                var area = e.features[0].properties.area;
+                var name = e.features[0].properties.name;
+                var actlist = e.features[0].properties.actlist;
+                var id = e.features[0].id;
+                console.log(e.features[0]);
+                var html = "<div class='poptext trailheads'>"
+                    + "<div class='kicker'>Trailhead</div>"
+                    + "<div class='death_hed'>"+name+"</div>"
+                    + "<div><strong>Activities:</strong> "+actlist+"</div>"
+                    + "<div><a target='_blank' href='https://www.fs.usda.gov/recarea/"+area+"/recreation/recarea?recid="+id+"'>More info</a></div></div>"
+               ;
+                
+                $(".pop").html(html);
+
+               // if we have highlighted features, change their highlight state to false
+                allFeatures = map.querySourceFeatures('trailheads')
+
+                allFeatures.forEach(function(f) {
+                  map.setFeatureState({
+                    source: 'trailheads',
+                    id: f.id
+                  },{
+                    highlight: false
+                  });
+                });
+                
+                map.setFeatureState({
+                    source: 'trailheads',
+                    id: e.features[0].id
+                    },{
+                    highlight: true
+                });
+                
+                map.flyTo({center: e.features[0].geometry.coordinates,zoom:14});
+                
+                
+            });
+            
+            map.on('mouseenter', 'trailheads', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+             
+            map.on('mousemove', 'trailheads', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'trailheads', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'trailheads', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            }) 
+             
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'trailheads', function () {
+                map.getCanvas().style.cursor = '';
+                 if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'trailheads', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+           });
+ 
+
+/* :::::::::CAMPING LAYER:::::::::  */
+
+            map.addSource('camping', {
+                'type': 'geojson',
+                'data': camping
+            });
+            //add recpoints layer
+        
+            map.addLayer({
+                'id': 'camping',
+                'type': 'circle',
+                'source': 'camping',
+                'layout': {
+                    'visibility': 'none',
+                },
+                'paint': {
+                    'circle-radius': {
+                        'base': 4,
+                        'stops': [
+                            [12, 4.5],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-stroke-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#000',
+                        '#fff'
+                    ],
+                    'circle-stroke-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        2,
+                        1
+                    ],
+                    'circle-color': 'forestgreen'
+                }
+            })
+
+            //add recpoints highlight layer
+
+            map.addLayer({
+                'id': 'camping-highlight',
+                'type': 'circle',
+                'source': 'camping',
+                'layout': {
+                    'visibility': 'none',
+                },
+                'paint': {
+                    'circle-radius': {
+                        'base': 6,
+                        'stops': [
+                            [12, 6],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-stroke-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        '#000',
+                        '#fff'
+                    ],
+                    'circle-stroke-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        2,
+                        0
+                    ],
+                    'circle-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        'forestgreen',
+                        'rgba(255,255,255,0)'
+                    ]
+                }
+            })
+
+            //click and mouse functions for recpoint info popup and marker highlight
+
+
+            map.on('click','camping-highlight', function(e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+                var area = e.features[0].properties.area;
+                var name = e.features[0].properties.name;
+                var actlist = e.features[0].properties.actlist;
+                var id = e.features[0].id;
+                console.log(e.features[0]);
+                var html = "<div class='poptext camping'>"
+                    + "<div class='kicker'>Camping</div>"
+                    + "<div class='death_hed'>"+name+"</div>"
+                    + "<div><strong>Activities:</strong> "+actlist+"</div>"
+                    + "<div><a target='_blank' href='https://www.fs.usda.gov/recarea/"+area+"/recreation/recarea?recid="+id+"'>More info</a></div></div>"
+               ;
+                
+                $(".pop").html(html);
+
+               // if we have highlighted features, change their highlight state to false
+                allFeatures = map.querySourceFeatures('camping')
+
+                allFeatures.forEach(function(f) {
+                  map.setFeatureState({
+                    source: 'camping',
+                    id: f.id
+                  },{
+                    highlight: false
+                  });
+                });
+                
+                map.setFeatureState({
+                    source: 'camping',
+                    id: e.features[0].id
+                    },{
+                    highlight: true
+                });
+                
+                map.flyTo({center: e.features[0].geometry.coordinates,zoom:14});
+                
+                
+            });
+            
+            map.on('mouseenter', 'camping', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+             
+            map.on('mousemove', 'camping', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'camping', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'camping', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            }) 
+             
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'camping', function () {
+                map.getCanvas().style.cursor = '';
+                 if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'camping', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+           });
+
+
+
+
+
+
+/* :::::::::DEATHS LAYER:::::::::  */
+            map.addSource('deaths', {
+                'type': 'geojson',
+                'data': deathdata,
+                'generateId': true
+            });
+        
+            //add death layer
+        
+            map.addLayer({
+                'id': 'deaths',
+                'type': 'circle',
+                'source': 'deaths',
+                'layout': {
+                    'visibility': 'none',  
+                },
+                'paint': {
+                    'circle-radius': {
+                        'base': 2.5,
+                        'stops': [
+                            [12, 3],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-stroke-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#900',
+                        '#fff'
+                    ],
+                    'circle-stroke-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        2,
+                        1
+                    ],
+                    'circle-color': '#900'
+                }
+            })
+
+            //add death highlight layer
+
+            map.addLayer({
+                'id': 'deaths-highlight',
+                'type': 'circle',
+                'source': 'deaths',
+                'layout': {
+                    'visibility': 'none',
+                },
+                 'paint': {
+                    'circle-radius': {
+                        'base': 6,
+                        'stops': [
+                            [12, 6],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        'rgb(0,0,0)',
+                        'rgba(255,255,255,0)'
+                    ]
+                }
+            })
+            
+            
+            //click and mouse functions for death info popup and marker highlight
+            map.on('click','deaths-highlight', function(e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.description;
+                var location = e.features[0].properties.location;
+                var name = e.features[0].properties.name;
+                var age = e.features[0].properties.age;
+                var city = e.features[0].properties.city;
+                var state = e.features[0].properties.state;
+                var month = e.features[0].properties.month;
+                var year = e.features[0].properties.year;
+                var link = e.features[0].properties.link;
+                var activity = e.features[0].properties.activity;
+                if (city!="") {
+                    city = city+", ";
+                } else {
+                    city= "";
+                }
+                
+                if (age!="") {
+                    age = age+", ";
+                } else {
+                    age= "";
+                }
+                
+                if (link!="") {
+                    link = "<a href='"+link+"' target='_blank'>Read more</a>";
+                } else {
+                    link= "";
+                }
+
+                var html = "<div class='poptext deaths'>"
+                    + "<div class='kicker'>"+activity+" Death</div>"
+                    + "<div>"+month+" "+year+"</div>"
+                    + "<div class='death_hed'>"+location+"</div>"
+                    + "<div>"+name+", "+age+city+state+"</div>"
+                    + "<div>"+description+"</div>"
+                    + "<div>"+link+"</div></div>"
+                ;
+                
+                $(".pop").html(html);
+
+               // if we have highlighted features, change their highlight state to false
+                allFeatures = map.querySourceFeatures('deaths')
+
+                allFeatures.forEach(function(f) {
+                  map.setFeatureState({
+                    source: 'deaths',
+                    id: f.id
+                  },{
+                    highlight: false
+                  });
+                });
+                
+                map.setFeatureState({
+                    source: 'deaths',
+                    id: e.features[0].id
+                    },{
+                    highlight: true
+                });
+                
+                map.flyTo({center: e.features[0].geometry.coordinates,zoom:14});
+                
+                
+            });
+            
+            map.on('mouseenter', 'deaths', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+             
+            map.on('mousemove', 'deaths', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'deaths', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'deaths', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            }) 
+             
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'deaths', function () {
+                map.getCanvas().style.cursor = '';
+                 if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'deaths', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+           });
+ 
+
+
+
+
+/* :::::::::snopark LAYER:::::::::  */
+            map.addSource('snopark', {
+                'type': 'geojson',
+                'data': snopark,
+                'generateId': true
+            });
+        
+            //add death layer
+        
+            map.addLayer({
+                'id': 'snopark',
+                'type': 'circle',
+                'source': 'snopark',
+                'layout': {
+                    'visibility': 'none',
+                },
+                'paint': {
+                    'circle-radius': {
+                        'base': 4,
+                        'stops': [
+                            [12, 4.5],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-stroke-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        '#000',
+                        '#fff'
+                    ],
+                    'circle-stroke-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'hover'], false],
+                        2,
+                        1
+                    ],
+                    'circle-color': '#177dd1'
+                }
+            })
+
+            //add snopark highlight layer
+
+            map.addLayer({
+                'id': 'snopark-highlight',
+                'type': 'circle',
+                'source': 'snopark',
+                'layout': {
+                    'visibility': 'none',
+                },
+                 'paint': {
+                    'circle-radius': {
+                        'base': 6,
+                        'stops': [
+                            [12, 6],
+                            [22, 180]
+                        ]
+                    },
+                    'circle-stroke-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        '#000',
+                        '#fff'
+                    ],
+                    'circle-stroke-width': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        2,
+                        0
+                    ],
+                    'circle-color': [
+                        'case',
+                        ['boolean', ['feature-state', 'highlight'], false],
+                        '#115d9c',
+                        'rgba(255,255,255,0)'
+                    ]
+                }
+            })
+            
+            
+            //click and mouse functions for death info popup and marker highlight
+            map.on('click','snopark-highlight', function(e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var description = e.features[0].properties.desc;
+                var name = e.features[0].properties.name;
+                var html = "<div class='poptext snopark'>"
+                    + "<div class='kicker'>Sno-Park</div>"
+                    + "<div class='death_hed'>"+name+"</div>"
+                    + "<div><strong>Activities:</strong> "+description+"</div>"
+                ;
+                
+                $(".pop").html(html);
+
+               // if we have highlighted features, change their highlight state to false
+                allFeatures = map.querySourceFeatures('snopark')
+
+                allFeatures.forEach(function(f) {
+                  map.setFeatureState({
+                    source: 'snopark',
+                    id: f.id
+                  },{
+                    highlight: false
+                  });
+                });
+                
+                map.setFeatureState({
+                    source: 'snopark',
+                    id: e.features[0].id
+                    },{
+                    highlight: true
+                });
+                
+                map.flyTo({center: e.features[0].geometry.coordinates,zoom:14});
+                
+                
+            });
+            
+            map.on('mouseenter', 'snopark', function () {
+                map.getCanvas().style.cursor = 'pointer';
+            });
+             
+            map.on('mousemove', 'snopark', function(e) {
+                if (e.features.length > 0) {
+                    if (hoveredStateId !== null) {
+                        map.setFeatureState(
+                            { source: 'snopark', id: hoveredStateId },
+                            { hover: false }
+                        );
+                    }
+                    hoveredStateId = e.features[0].id;
+                    map.setFeatureState(
+                        { source: 'snopark', id: hoveredStateId },
+                        { hover: true }
+                    );
+                }
+            }) 
+             
+            // Change it back to a pointer when it leaves.
+            map.on('mouseleave', 'snopark', function () {
+                map.getCanvas().style.cursor = '';
+                 if (hoveredStateId !== null) {
+                    map.setFeatureState(
+                        { source: 'snopark', id: hoveredStateId },
+                        { hover: false }
+                    );
+                }
+                hoveredStateId = null;
+           });
+ 
+
+
+
+
+
+            
         
             // make a pointer cursor
             map.getCanvas().style.cursor = 'default';
            
         
-            //Code for layer toggle
-            $(".layer-checks").show();
-            $(".layer-checks input").on("change",function(e) {
+
+            $(".layerbutt").on("click", function(e) {
                 var thisLayer = $(this).data("layer");
-                var thisLegend = $(this).data("legend");
-                var thisHide = $(this).data("others");
-                if (thisHide=='hide') {
-                    $('.legends').hide();
-                    $.each(layers,function(k,v) {
-                       map.setLayoutProperty(v, 'visibility', 'none'); 
-                    })
-                    $('.layer-checks input').prop("checked", false);
-                    $('.'+thisLayer+'_switch input').prop("checked", true);
-                    map.setLayoutProperty(thisLayer, 'visibility', 'visible');
-                }
-                if (e.target.checked) {
-                    $("."+thisLegend+"-legend").show();
-                } else {
-                    $("."+thisLegend+"-legend").hide();
-                }
-                
-                map.setLayoutProperty(
+                console.log(thisLayer);
+/*                 var bbox = turf.bbox(thisLayer); */
+                e.preventDefault();
+                e.stopPropagation();
+                 
+                var visibility = map.getLayoutProperty(
                     thisLayer,
-                    'visibility',
-                    e.target.checked ? 'visible' : 'none'
+                    'visibility'
                 );
+                 
+                // Toggle layer visibility by changing the layout object's visibility property.
+                if (visibility === 'visible') {
+                    $(".pop").html("");
+                    $(".layerbutt."+thisLayer+" span").text("Show");
+                    $(".layerbutt."+thisLayer).removeClass("active");
+                    map.setLayoutProperty(
+                        thisLayer,
+                        'visibility',
+                        'none'
+                    );
+                     map.setLayoutProperty(
+                        thisLayer+"-highlight",
+                        'visibility',
+                        'none'
+                    );
+               } else {
+                    $(".layerbutt."+thisLayer+" span").text("Hide");
+                    $(".layerbutt."+thisLayer).addClass("active");
+                    map.setLayoutProperty(
+                        thisLayer,
+                        'visibility',
+                        'visible'
+                    );
+                     map.setLayoutProperty(
+                        thisLayer+"-highlight",
+                        'visibility',
+                        'visible'
+                    );
+                    map.fitBounds(bboxes[thisLayer], {padding:20});
+                }
             })
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
         })
                 
         

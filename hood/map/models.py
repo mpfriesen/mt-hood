@@ -13,9 +13,9 @@ class SnoPark(models.Model):
     
 class Trail(models.Model):
     id = models.BigIntegerField(primary_key=True)
-    trail_no = models.CharField(max_length=254, null=True)
-    trail_name = models.CharField(max_length=254, null=True)
-    length_mil = models.FloatField(null=True)
+    trail_no = models.CharField(max_length=254, blank=True, null=True)
+    trail_name = models.CharField(max_length=254, blank=True, null=True)
+    length_mil = models.FloatField(blank=True, null=True)
     geom = models.MultiLineStringField(srid=4326)
 
     def __str__(self):
@@ -39,17 +39,17 @@ class TrailJoin(models.Model):
 
 
 class Death(models.Model):
-    name = models.CharField(max_length=254, null=True)
-    age = models.CharField(max_length=10, null=True)
-    city = models.CharField(max_length=254, null=True)
-    state = models.CharField(max_length=254, null=True)
-    location = models.CharField(max_length=254, null=True)
+    name = models.CharField(max_length=254, blank=True, null=True)
+    age = models.CharField(max_length=10, blank=True, null=True)
+    city = models.CharField(max_length=254, blank=True, null=True)
+    state = models.CharField(max_length=254, blank=True, null=True)
+    location = models.CharField(max_length=254, blank=True, null=True)
     month = models.CharField(max_length=254, null=True)
     year = models.IntegerField()
-    activity = models.CharField(max_length=254, null=True)
-    cause_death = models.CharField(max_length=254, null=True)
-    desc = models.CharField(max_length=254, null=True)
-    link = models.CharField(max_length=254, null=True)
+    activity = models.CharField(max_length=254, blank=True, null=True)
+    cause_death = models.CharField(max_length=254, blank=True, null=True)
+    desc = models.CharField(max_length=254, blank=True, null=True)
+    link = models.CharField(max_length=254, blank=True, null=True)
     lat = models.FloatField()
     lng = models.FloatField()
     geom = models.PointField(srid=4326)
@@ -60,7 +60,7 @@ class Death(models.Model):
 
 class RecPoint(models.Model):
     id = models.BigIntegerField(primary_key=True)
-    name = models.CharField(max_length=254, null=True)
+    name = models.CharField(max_length=254, blank=True, null=True)
     area = models.CharField(max_length=254)
     actlist = models.CharField(max_length=254)
     geom = models.PointField(srid=4326)
@@ -82,10 +82,11 @@ class ActivJoin(models.Model):
     
     
 class Photo(models.Model):
-    title = models.CharField(max_length=150)
-    desc = models.TextField()
-    cover = models.ImageField(upload_to='images/')
+    name = models.CharField(max_length=150, blank=True, null=True)
+    email = models.CharField(max_length=254, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    image = models.ImageField(upload_to='images', blank=True, null=True)
 
     def __str__(self):
-        return self.title
+        return self.name
 

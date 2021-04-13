@@ -51,7 +51,7 @@ recpoint_shp = Path(__file__).resolve().parent / 'data' / 'recpoint.shp'
 death_shp = Path(__file__).resolve().parent / 'data' / 'death.shp'
 
 def run(verbose=True):
-    lm = LayerMapping(RecPoint, str(recpoint_shp), recpoint_mapping, transform=False)
+    lm = LayerMapping(SnoPark, str(snopark_shp), snopark_mapping, transform=False)
     lm.save(strict=True, verbose=verbose)
 
 

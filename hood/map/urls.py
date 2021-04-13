@@ -1,9 +1,10 @@
 from django.conf.urls import url                                                                                                                              
 from django.urls import include, path
 from . import views
-from .views import PhotoView
+from .views import image_upload_view, PhotoView
 
 urlpatterns = [ 
-    path('photos', PhotoView.as_view(), name='photo'),
-    url(r'', views.default_map, name="default"),
-]
+    path('', views.default_map, name="default"),
+    path('upload/',image_upload_view.as_view(), name='upload'),
+    path('photo/', PhotoView.as_view(), name='photo')
+ ]

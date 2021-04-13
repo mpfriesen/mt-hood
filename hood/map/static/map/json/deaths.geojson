@@ -1,0 +1,3149 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69106,
+          45.37657
+        ]
+      },
+      "properties": {
+        "name": "Austin Mishler",
+        "age": "27",
+        "city": "Bend",
+        "state": "OR",
+        "location": "Eliot Glacier",
+        "month": "October",
+        "year": 2020,
+        "activity": "climbing",
+        "description": "Mishler had camped on Eliot Glacier on Oct. 26 and apparently fell while climbing solo in very technical terrain.",
+        "link": "https://ktvz.com/news/accidents-crashes/2020/11/06/challenging-mission-staged-to-recover-body-of-bend-man-who-died-on-mount-hood/",
+        "id": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.70746,
+          45.36821
+        ]
+      },
+      "properties": {
+        "name": "Cory Johnston",
+        "age": "47",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Illumination Saddle",
+        "month": "February",
+        "year": 2020,
+        "activity": "skiing",
+        "description": "Johnston was backcountry skiing on Feb. 25 and fell from an unknown height. His body was found near Illumination Saddle near 9,400 feet.",
+        "link": "https://www.oregonlive.com/news/2020/02/third-death-on-mount-hood-in-as-many-weeks-claims-father-talented-surgeon.html",
+        "id": 2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.66079,
+          45.3467
+        ]
+      },
+      "properties": {
+        "name": "Ryan Zeitner",
+        "age": "45",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt. Hood Meadows (Heather Canyon)",
+        "month": "February",
+        "year": 2020,
+        "activity": "snowboarding",
+        "description": "Zeitner slipped on a patch of ice on Moon Bowl in Heather Canyon and crashed into a tree on Feb. 16.",
+        "link": "https://www.oregonlive.com/news/2020/02/i-thought-i-was-going-to-die-skier-recounts-terrifying-fall-on-same-slope-where-snowboarder-died-at-mt-hood-meadows.html",
+        "id": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.66,
+          45.3463
+        ]
+      },
+      "properties": {
+        "name": "Tim Bauters",
+        "age": "47",
+        "city": "Sunnyvale",
+        "state": "CA",
+        "location": "Mt. Hood Meadows (Heather Canyon)",
+        "month": "February",
+        "year": 2020,
+        "activity": "snowboarding",
+        "description": "Bauters was reported missing on Feb. 14. His body was found in a gully in Heather Canyon three days later.",
+        "link": "https://www.oregonlive.com/news/2020/02/2nd-snowboarder-dies-within-days-in-mt-hood-meadows-heather-canyon.html?utm_source=facebook&utm_campaign=theoregonian_sf&utm_medium=social&fbclid=IwAR0IRG1nyD8rX8h0RrNnnhuH0RaaOgUYr8Bhxofquq9hUIWvmHhiGrxvMpI",
+        "id": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.71351,
+          45.322632
+        ]
+      },
+      "properties": {
+        "name": "Benjamin Johnson",
+        "age": "41",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Timberline Lodge",
+        "month": "February",
+        "year": 2019,
+        "activity": "skiing",
+        "description": "Johnson was skiing with a friend on Feb. 23 when he fell into a tree well. Efforts to revive him were unsuccessful.",
+        "link": "https://www.oregonlive.com/pacific-northwest-news/2019/02/skier-dies-after-fall-into-tree-well-on-mt-hood.html#:~:text=A%2042%2Dyear%2Dold%20man,man%20were%20unsuccessful%2C%20Burton%20said.",
+        "id": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.683847,
+          45.379719
+        ]
+      },
+      "properties": {
+        "name": "George Regis",
+        "age": "63",
+        "city": "Battle Ground",
+        "state": "WA",
+        "location": "Eliot Glacier",
+        "month": "January",
+        "year": 2019,
+        "activity": "plane crash",
+        "description": null,
+        "link": null,
+        "id": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6979562,
+          45.369022
+        ]
+      },
+      "properties": {
+        "name": "Miha Sumi",
+        "age": "35",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Hogsback",
+        "month": "February",
+        "year": 2018,
+        "activity": "climbing",
+        "description": "Sumi died after falling on the Hogsback area of Mount Hood.",
+        "link": "https://www.oregonlive.com/clackamascounty/2018/02/mount_hood_climber_who_died.html",
+        "id": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.665223,
+          45.333112
+        ]
+      },
+      "properties": {
+        "name": "Geoffry Bradeen",
+        "age": "45",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt. Hood Meadows",
+        "month": "January",
+        "year": 2007,
+        "activity": "skiing",
+        "description": "Bradeen fell and was hit in the head from behind by a snowboarder as he was getting up.",
+        "link": "http://blog.oregonlive.com/breakingnews/2007/12/accident_at_mount_hood_meadows.html",
+        "id": 8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.666223,
+          45.333112
+        ]
+      },
+      "properties": {
+        "name": "Eric McConeghy",
+        "age": "28",
+        "city": "Seattle",
+        "state": "WA",
+        "location": "Mt. Hood Meadows",
+        "month": "December",
+        "year": 2007,
+        "activity": "snowboarding",
+        "description": "McConeghy fell headfirst in deep snow. He suffocated before friends could dig him out.",
+        "link": "http://blog.oregonlive.com/breakingnews/2007/12/snowboarder_apparently_suffoca.html",
+        "id": 9
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6987,
+          45.372585
+        ]
+      },
+      "properties": {
+        "name": "John Thorton Jenkins",
+        "age": "32",
+        "city": "Seattle",
+        "state": "WA",
+        "location": "Hogsback",
+        "month": "May",
+        "year": 2017,
+        "activity": "climbing",
+        "description": "Fall",
+        "link": null,
+        "id": 10
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.653597,
+          45.34366
+        ]
+      },
+      "properties": {
+        "name": "Steve Leavitt",
+        "age": "57",
+        "city": "The Dalles",
+        "state": "OR",
+        "location": "Mt. Hood Meadows",
+        "month": "March",
+        "year": 2017,
+        "activity": "skiing",
+        "description": "Leavitt died after hitting a tree in the lower Heather Canyon. He was wearing a helmet but was buried in deep snow that later became compacted by the rain. Leavitt was missing for eight days before his body was recovered.",
+        "link": "http://www.oregonlive.com/pacific-northwest-news/index.ssf/2017/03/authorities_recover_body_of_mi.html",
+        "id": 11
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6996,
+          45.37132
+        ]
+      },
+      "properties": {
+        "name": "Ward Milo Maxfield",
+        "age": "66",
+        "city": "Paul",
+        "state": "ID",
+        "location": "Hogsback",
+        "month": "June",
+        "year": 2015,
+        "activity": "climbing",
+        "description": "Maxfield was leading his 17-year-old grandson and two others at the 10,500-foot level on the Hogsback route, when he fell about 400 feet to the Hot Rocks area.",
+        "link": null,
+        "id": 12
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.777309,
+          45.299436
+        ]
+      },
+      "properties": {
+        "name": "Brian E. Fletcher",
+        "age": "37",
+        "city": "Medford",
+        "state": "OR",
+        "location": "Mt. Hood Skibowl",
+        "month": "December",
+        "year": 2014,
+        "activity": "skiing",
+        "description": "Flecther was skiing down the Middle Reynolds Trail toward Low Road when he caught an edge and fell, landing on his head and chest.",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2015/01/skier_died_at_mt_hood_skibowl.html",
+        "id": 13
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.694717,
+          45.374701
+        ]
+      },
+      "properties": {
+        "name": "Robert J. Cormier",
+        "age": "57",
+        "city": "Cranford",
+        "state": "NJ",
+        "location": "Eliot Glacier",
+        "month": "May",
+        "year": 2014,
+        "activity": "climbing",
+        "description": "Fell through ice an ice cornice on the north side of the mountain.",
+        "link": "http://www.oregonlive.com/pacific-northwest-news/index.ssf/2014/05/climber_who_died_in_fall_on_mo.html",
+        "id": 14
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.699095,
+          45.357863
+        ]
+      },
+      "properties": {
+        "name": "Collin R. Backowski",
+        "age": "25",
+        "city": "Pine Junction",
+        "state": "CO",
+        "location": "White River Glacier",
+        "month": "August",
+        "year": 2013,
+        "activity": "snowboarding",
+        "description": "Killed when an ice tunnel, at an elevation of about 8,100 feet, collapsed.",
+        "link": "http://www.oregonlive.com/pacific-northwest-news/index.ssf/2013/08/colorado_snowboarder_killed_on.html",
+        "id": 16
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.708353,
+          45.382386
+        ]
+      },
+      "properties": {
+        "name": "Kinley Adams",
+        "age": "59",
+        "city": "Salem",
+        "state": "OR",
+        "location": "Sandy Glacier",
+        "month": "June",
+        "year": 2013,
+        "activity": "climbing",
+        "description": "Adams failed to return June 22 from a solo climb. After a long week of looking, search and rescue crews recovered his body on June 30. Adams was found at approximately 8,400 feet, at the top of Sandy Glacier near the Hood River County line.",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2013/07/climber_kinley_adams_died_from.html",
+        "id": 17
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.676603,
+          45.34583
+        ]
+      },
+      "properties": {
+        "name": "Josef Desch",
+        "age": "51",
+        "city": "Happy Valley",
+        "state": "OR",
+        "location": "Mt. Hood Meadows",
+        "month": "April",
+        "year": 2013,
+        "activity": "skiing",
+        "description": "Died after skiing into a tree\u00a0 on the Arena run at Mount Hood Meadows Ski Resort. Desch was wearing a helmet at the time of the crash and was pronounced dead at the scene.",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2013/04/happy_valley_skier_dies_in_cra.html",
+        "id": 18
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.778616,
+          45.301937
+        ]
+      },
+      "properties": {
+        "name": "Russell Tiffany",
+        "age": "23",
+        "city": "Las Vegas",
+        "state": "NV",
+        "location": "Mt. Hood Skibowl",
+        "month": "March",
+        "year": 2013,
+        "activity": "skiing",
+        "description": "Search and rescue crews found Tiffany's body in a creek in an out-of-bounds ski area just west of Ski Bowl a few hundred feet from Highway 26. Tiffany had been drinking and got lost after skiing off on his own.",
+        "link": null,
+        "id": 19
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6993,
+          45.368799
+        ]
+      },
+      "properties": {
+        "name": "Mark Cartier",
+        "age": "56",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Hogsback",
+        "month": "June",
+        "year": 2012,
+        "activity": "climbing",
+        "description": "Cartier was climbing alone on Mount Hood when he fell about 1,000 feet near the Hogsback area on the south side of the mountain",
+        "link": "http://www.oregonlive.com/portland/index.ssf/2012/06/fallen_mount_hood_climber_iden.html",
+        "id": 20
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.670923,
+          45.35106
+        ]
+      },
+      "properties": {
+        "name": "Levi Krukowski",
+        "age": "18",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt. Hood Meadows (Heather Canyon)",
+        "month": "March",
+        "year": 2010,
+        "activity": "snowboarding",
+        "description": "Krukowski fell about 40 feet into a snow crevasse, landing in a creek running through the bottom of the crevasse. His body was found partially submerged in the creek, which is inside the hazard area, near the bottom of a waterfall.",
+        "link": "http://www.oregonlive.com/news/index.ssf/2010/03/backcounty_snowboarder_dies_at.html",
+        "id": 21
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.779994,
+          45.288249
+        ]
+      },
+      "properties": {
+        "name": "James Malcarne",
+        "age": "37",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt Hood Skibowl",
+        "month": "March",
+        "year": 2012,
+        "activity": "skiing",
+        "description": "Friends found Malcarne at the base of a tree near the edge of the run. He died after hitting the tree.\u00a0",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2012/03/37-year-old_portland_skier_die.html",
+        "id": 22
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.778452,
+          45.293758
+        ]
+      },
+      "properties": {
+        "name": "Taylur DeWolf",
+        "age": "17",
+        "city": "Sandy",
+        "state": "OR",
+        "location": "Mt. Hood Skibowl",
+        "month": "January",
+        "year": 2012,
+        "activity": "snowboarding",
+        "description": "DeWolf was last seen passing her two friends at a high rate of speed. She was discovered hours later after striking a tree.",
+        "link": null,
+        "id": 23
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.665816,
+          45.333474
+        ]
+      },
+      "properties": {
+        "name": "Willam James Cannard",
+        "age": "41",
+        "city": "Oregon City",
+        "state": "OR",
+        "location": "Mt. Hood Meadows",
+        "month": "January",
+        "year": 2011,
+        "activity": "skiing",
+        "description": "Cannard fell while skiing on a double black-diamond run along steep terrain in the Memorial Bowl area. Ski patrollers arrived just after the crash but were unable to revive him.",
+        "link": null,
+        "id": 24
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.693754,
+          45.37886
+        ]
+      },
+      "properties": {
+        "name": "Robert Dale Wiebe",
+        "age": "58",
+        "city": "Langley",
+        "state": "BC",
+        "location": "Coe Glacier",
+        "month": "June",
+        "year": 2010,
+        "activity": "climbing/skiing",
+        "description": "Wiebe was traversing Coe Glacier on skis with four other people, including two members of the Crag Rats. The group had planned to ski down from the 9,500-foot Snow Dome, described as \"a sort-of ridge between Coe and Eliot glaciers.\" Officials believe Wie",
+        "link": "http://www.oregonlive.com/news/index.ssf/2010/06/search-and-rescue_crews_recove.html",
+        "id": 25
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.653972,
+          45.335978
+        ]
+      },
+      "properties": {
+        "name": "Joshua Halberg",
+        "age": "19",
+        "city": "Battle Ground",
+        "state": "WA",
+        "location": "Mt. Hood Meadows (Park Place)",
+        "month": "April",
+        "year": 2010,
+        "activity": "snowboarding",
+        "description": "Died enroute to the hospital after an accident in which he was attempting an inverted aerial maneuver.",
+        "link": "http://www.oregonlive.com/news/index.ssf/2010/04/snowboarder_dies_on_mount_hood.html",
+        "id": 26
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.663713,
+          45.339477
+        ]
+      },
+      "properties": {
+        "name": "Ilya P. Sirosh",
+        "age": "15",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt Hood Meadows (North Canyon Trail)",
+        "month": "December",
+        "year": 2010,
+        "activity": "snowboarding",
+        "description": "Sirosh's body is discovered while members of the ski patrol were clearing the slopes near the North Canyon Trail. After trying to resuscitate the teen, they took him to a medical clinic at the resort. He was pronounced dead a short time later.",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2010/12/authorities_name_teen_snowboar.html",
+        "id": 27
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.674914,
+          45.332358
+        ]
+      },
+      "properties": {
+        "name": "Kyle Cryblskey",
+        "age": "23",
+        "city": "Vancouver",
+        "state": "WA",
+        "location": "Mt. Hood Meadows (Rose City terrain park)",
+        "month": "February",
+        "year": 2010,
+        "activity": "snowboarding",
+        "description": "Cryblskey went off a jump made of snow and appeared to have landed on his head.",
+        "link": "http://www.oregonlive.com/news/index.ssf/2010/02/vancouver_nowboarder_dies_afte.html",
+        "id": 28
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.670823,
+          45.35106
+        ]
+      },
+      "properties": {
+        "name": "Kyle S. Stanley",
+        "age": "45",
+        "city": "West Linn",
+        "state": "OR",
+        "location": "Mt. Hood Meadows (Heather Canyon)",
+        "month": "January",
+        "year": 1999,
+        "activity": "skiing",
+        "description": "Stanley lost control while skiing and slid into a tree, injuring his neck. He was evacuated by helicopter but died eight hours later.",
+        "link": null,
+        "id": 29
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.709676,
+          45.371232
+        ]
+      },
+      "properties": {
+        "name": "Luke T. Gullberg",
+        "age": "26",
+        "city": "Des Moines",
+        "state": "WA",
+        "location": "Reid Glacier",
+        "month": "December",
+        "year": 2009,
+        "activity": "climbing",
+        "description": "Searchers found Gullberg's body in a treacherous area near the 9,000-foot level of Mount Hood.",
+        "link": "http://www.oregonlive.com/news/index.ssf/2009/12/three_climbers_reported_missin.html",
+        "id": 30
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.7171,
+          45.370931
+        ]
+      },
+      "properties": {
+        "name": "Katie Nolan",
+        "age": "29",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Reid Glacier",
+        "month": "December",
+        "year": 2009,
+        "activity": "climbing",
+        "description": "In a climbing party with Luke Gullberg and Anthony Vietti. Climbers went missing Dec. 11. Search and rescue was suspended Dec. 16. Nolan's body was recovered Aug. 26, 2010",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2010/08/mt_hood_recovery_mission_finds.html",
+        "id": 31
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.7171,
+          45.370057
+        ]
+      },
+      "properties": {
+        "name": "Anthony Vietti",
+        "age": "25",
+        "city": "Longview",
+        "state": "WA",
+        "location": "Reid Glacier",
+        "month": "December",
+        "year": 2009,
+        "activity": "climbing",
+        "description": "In climbing party with Luke Gullberg and Katie Nolan. Climbers went missing Dec. 11. Search and rescue suspended Dec. 16. Vietti's body was recovered Aug. 26, 2010",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2010/08/mt_hood_recovery_mission_finds.html",
+        "id": 32
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.698471,
+          45.371307
+        ]
+      },
+      "properties": {
+        "name": "Brooke Elyse Colvin",
+        "age": "31",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Hogsback",
+        "month": "January",
+        "year": 2009,
+        "activity": "climbing",
+        "description": "Colvin and her husband, Thad Jonathan Stavn, 33, were climbing on the south slope between Hogsback and Pearly Gates when she was hit directly in the face by a large piece of ice. She then fell 400 feet.",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2009/01/mount_hood_climbers_with_possi.html",
+        "id": 33
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.7515,
+          45.351607
+        ]
+      },
+      "properties": {
+        "name": "Emma C. Place",
+        "age": "19",
+        "city": "Portland",
+        "state": "OR",
+        "location": null,
+        "month": "August",
+        "year": 2017,
+        "activity": "hiking",
+        "description": "Fall",
+        "link": null,
+        "id": 34
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.700662,
+          45.369703
+        ]
+      },
+      "properties": {
+        "name": "Jared Townsley",
+        "age": "32",
+        "city": "Tigard",
+        "state": "OR",
+        "location": "White River Canyon",
+        "month": "February",
+        "year": 2012,
+        "activity": "climbing",
+        "description": "Townsley fell while descending the mountain.",
+        "link": "http://www.oregonlive.com/clackamascounty/index.ssf/2012/02/national_guard_helicopter_join.html",
+        "id": 35
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.696165,
+          45.343368
+        ]
+      },
+      "properties": {
+        "name": "Sallie Hee",
+        "age": "28",
+        "city": "Corvallis",
+        "state": "OR",
+        "location": "White River Canyon",
+        "month": "April",
+        "year": 1975,
+        "activity": "climbing",
+        "description": "A Mazamas class got caught in an avalanche while attempting to cross White River Canyon. Hee became buried upside down in about 5 feet of snow.",
+        "link": null,
+        "id": 36
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.693926,
+          45.373765
+        ]
+      },
+      "properties": {
+        "name": "Kelly James",
+        "age": "48",
+        "city": "Dallas",
+        "state": "TX",
+        "location": "Cooper Spur",
+        "month": "December",
+        "year": 2006,
+        "activity": "climbing",
+        "description": "James was injured in a climb with two friends and died of hypothermia. His body was recovered Dec. 17 in a snow cave near the summit on the mountain\u2019s north side.",
+        "link": "http://www.oregonlive.com/news/oregonian/multimedia/index.ssf?missingclimbers",
+        "id": 37
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.693497,
+          45.373885
+        ]
+      },
+      "properties": {
+        "name": "Brian Hall",
+        "age": "37",
+        "city": "Dallas",
+        "state": "TX",
+        "location": "Cooper Spur",
+        "month": "December",
+        "year": 2006,
+        "activity": "climbing",
+        "description": "In a climbing party with Jerry \"Nikko\" Cooke and Kelly James. Searchers suspended their search for Hall and Cooke on Dec. 20.",
+        "link": "http://www.oregonlive.com/news/oregonian/multimedia/index.ssf?missingclimbers",
+        "id": 38
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69311,
+          45.373614
+        ]
+      },
+      "properties": {
+        "name": "Jerry \"Nikko\" Cooke",
+        "age": "36",
+        "city": "Brooklyn",
+        "state": "NY",
+        "location": "Cooper Spur",
+        "month": "December",
+        "year": 2006,
+        "activity": "climbing",
+        "description": "In a climbing party with Brian Hall and Kelly James. Searchers suspended their search for Hall and Cooke on Dec. 20.",
+        "link": "http://www.oregonlive.com/news/oregonian/multimedia/index.ssf?missingclimbers",
+        "id": 39
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.679084,
+          45.367253
+        ]
+      },
+      "properties": {
+        "name": "Todd R. Engelhardt",
+        "age": "34",
+        "city": "Seattle",
+        "state": "WA",
+        "location": "Cooper Spur",
+        "month": "June",
+        "year": 2005,
+        "activity": "climbing",
+        "description": "Engelhardt died after falling at least 2,000 feet to his death. His body was recovered near 8,400 feet on the Newton Clark Glacier.",
+        "link": null,
+        "id": 40
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.716549,
+          45.381723
+        ]
+      },
+      "properties": {
+        "name": "Kenny Dale Kasselder",
+        "age": "37",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Sandy Glacier",
+        "month": "November",
+        "year": 2004,
+        "activity": "climbing",
+        "description": "Kasselder died after falling into a 30-foot crevasse on the Sandy Glacier on the west side of Mount Hood. Kasselder's climbing partner, Shaun M. Olcott, was injured in the fall.",
+        "link": null,
+        "id": 41
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.779971,
+          45.375604
+        ]
+      },
+      "properties": {
+        "name": "Sarah Bishop",
+        "age": "27",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Sandy River at Rushing Water Creek",
+        "month": "August",
+        "year": 2004,
+        "activity": "hiking",
+        "description": "Bishop, ending a four-day backpacking hike on the Timberline Trail, drowned while trying to cross the river.",
+        "link": null,
+        "id": 42
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.671368,
+          45.342618
+        ]
+      },
+      "properties": {
+        "name": "Scott A. Tyler",
+        "age": "29",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt. Hood Meadows (The Face)",
+        "month": "February",
+        "year": 2004,
+        "activity": "snowboarding",
+        "description": "Tyler, who was wearing a helmet, crashed as he went down a run called The Face, which is rated \"most difficult\" on the ski resort's trail map.",
+        "link": null,
+        "id": 43
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.676988,
+          45.341157
+        ]
+      },
+      "properties": {
+        "name": "Matthew Kixmiller",
+        "age": "29",
+        "city": "Littleton",
+        "state": "CO",
+        "location": "Mt. Hood Meadows",
+        "month": "January",
+        "year": 2004,
+        "activity": "snowboarding",
+        "description": "Kixmiller died of massive chest injuries after he hit a log while snowboarding in an ungroomed area near the Cascade Express lift.",
+        "link": null,
+        "id": 44
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.669464,
+          45.331272
+        ]
+      },
+      "properties": {
+        "name": "Alexander R. \"Alex\" Stacey",
+        "age": "12",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt. Hood Meadows",
+        "month": "January",
+        "year": 2003,
+        "activity": "skiing",
+        "description": "Near the end of a ski lesson at Mt. Hood Meadows, Stacey told his instructor he was having difficulty breathing. On the way to the first aid shack, the boy collapsed and lost consciousness.",
+        "link": null,
+        "id": 45
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.701486,
+          45.365685
+        ]
+      },
+      "properties": {
+        "name": "Fred Frauens",
+        "age": "49",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "March",
+        "year": 2003,
+        "activity": "snowshoe hike",
+        "description": "Frauens left Timberline Lodge on a solo snowshoe hike up the south slope. He was last seen at 9,500 feet.",
+        "link": null,
+        "id": 46
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.673769,
+          45.338321
+        ]
+      },
+      "properties": {
+        "name": "William Jameson",
+        "age": "33",
+        "city": "Tigard",
+        "state": "OR",
+        "location": "Mt. Hood Meadows",
+        "month": "January",
+        "year": 1996,
+        "activity": "snowboarding",
+        "description": "Jameson was snowboarding with his brother and a friend in a designated wooded area at Mt. Hood Meadows. Jameson fell into a rocky creek bed, hitting his head.",
+        "link": null,
+        "id": 47
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.737732,
+          45.320371
+        ]
+      },
+      "properties": {
+        "name": "Beau Richardson",
+        "age": "14",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Timberline Lodge",
+        "month": "December",
+        "year": 1984,
+        "activity": "skiing",
+        "description": "Richardson died after a night lost in the snow.",
+        "link": null,
+        "id": 48
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.7525,
+          45.351607
+        ]
+      },
+      "properties": {
+        "name": "Emily D. Lang",
+        "age": "19",
+        "city": "Portland",
+        "state": "OR",
+        "location": null,
+        "month": "August",
+        "year": 2017,
+        "activity": "hiking",
+        "description": "Fall",
+        "link": null,
+        "id": 49
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.707576,
+          45.352618
+        ]
+      },
+      "properties": {
+        "name": "Kees Nederhand",
+        "age": "14",
+        "city": "Utica",
+        "state": "NY",
+        "location": "Palmer Glacier",
+        "month": "August",
+        "year": 2002,
+        "activity": "skiing",
+        "description": "Nederhand, a 14-year-old ski camp student, lost control and crashed into rocks alongside the Palmer Glacier.",
+        "link": null,
+        "id": 50
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.697835,
+          45.373644
+        ]
+      },
+      "properties": {
+        "name": "Juancarlos Munuz",
+        "age": "30",
+        "city": "Government Camp",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "May",
+        "year": 2002,
+        "activity": "snowboarding",
+        "description": "Attempting to snowboard from the summit of Mount Hood, Munuz falls 2,500 feet onto Eliot Glacier. Munoz, an Argentine, was living in Government Camp and working at Timberline Lodge.",
+        "link": null,
+        "id": 51
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.651061,
+          45.405893
+        ]
+      },
+      "properties": {
+        "name": "Evan Clark",
+        "age": "15",
+        "city": "Hinsdale",
+        "state": "IL",
+        "location": "Cloud Cap",
+        "month": "August",
+        "year": 2001,
+        "activity": "hiking",
+        "description": "Clark died after a chunk of ice crushed him. Clark was hiking with his father and brother when they got caught on an ice field below a trail near the popular Cloud Cap hiking area on the mountain's northeast side",
+        "link": null,
+        "id": 52
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.653807,
+          45.404657
+        ]
+      },
+      "properties": {
+        "name": "Karoly Janos Orsi",
+        "age": "26",
+        "city": "Salem",
+        "state": "OR",
+        "location": "Cloud Cap",
+        "month": "September",
+        "year": 2001,
+        "activity": "hiking",
+        "description": "Orsi, a Hungarian exchange student living with a host family in Salem, disappears while on a solo day hike. Orsi and friends had camped in the Cloud Cap area on the northeast side of the mountain, and he was last seen Monday morning before he headed out",
+        "link": null,
+        "id": 53
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.695557,
+          45.373192
+        ]
+      },
+      "properties": {
+        "name": "Diana Bradford Kornet",
+        "age": "29",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Summit",
+        "month": "June",
+        "year": 2000,
+        "activity": "climbing",
+        "description": "Kornet reached the summit and then slipped as she looked over the mountain's northeast side, falling more than 2,500 feet.",
+        "link": null,
+        "id": 54
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.940045,
+          45.270054
+        ]
+      },
+      "properties": {
+        "name": "Steven Douglas Reed",
+        "age": "24",
+        "city": "Detroit",
+        "state": "MI",
+        "location": "Salmon Butte Trail",
+        "month": "June",
+        "year": 1999,
+        "activity": "hiking",
+        "description": "Missing hiker",
+        "link": null,
+        "id": 58
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.699805,
+          45.372288
+        ]
+      },
+      "properties": {
+        "name": "Thomas McGlinn",
+        "age": "39",
+        "city": "Portland",
+        "state": "OR",
+        "location": "West Crater Rim",
+        "month": "May",
+        "year": 1998,
+        "activity": "climbing",
+        "description": "A group of 10 Mazamas were ascending the West Crater Rim Route on the south side of Mount Hood when a slab slide avalanche occurred. The mass of snow tossed McGlinn at least 200 feet through jagged rocks and icy snow, killing him. Three other climbers we",
+        "link": null,
+        "id": 59
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.694062,
+          45.376207
+        ]
+      },
+      "properties": {
+        "name": "Mark Fraas",
+        "age": "40",
+        "city": "Hood River",
+        "state": "OR",
+        "location": "Chisholm Trail",
+        "month": "September",
+        "year": 1997,
+        "activity": "climbing",
+        "description": "Fraas and a friend, Rodney Brenneman of San Juan Capistrano, Calif., were carrying skis and were not trying to summit. When they reached the 10,000-foot level Fraas lost his grip and slid on ice, snow and rock through an area known as the Chisholm Trail.",
+        "link": null,
+        "id": 60
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.783076,
+          45.300508
+        ]
+      },
+      "properties": {
+        "name": "Kyle Curran",
+        "age": "16",
+        "city": "West Linn",
+        "state": "OR",
+        "location": "Mt. Hood Skibowl",
+        "month": "January",
+        "year": 1996,
+        "activity": "skiing",
+        "description": "Curran lost control while skiing in an ungroomed area, struck a snowbank headfirst and died.",
+        "link": null,
+        "id": 61
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.725268,
+          45.357332
+        ]
+      },
+      "properties": {
+        "name": "Col. Walter W. Hodge",
+        "age": "45",
+        "city": "San Francisco",
+        "state": "CA",
+        "location": "Mississippi Head",
+        "month": "April",
+        "year": 1949,
+        "activity": "flying",
+        "description": "A B-26 bomber disappeared on a flight from Hamilton Field, Calif., to Portland. The bodies of all three victims were recovered in August 1949",
+        "link": null,
+        "id": 62
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.739252,
+          45.41237
+        ]
+      },
+      "properties": {
+        "name": "Kenneth Budlong",
+        "age": "45",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Cathedral Ridge",
+        "month": "September",
+        "year": 1995,
+        "activity": "climbing",
+        "description": "Budlong disappeared while on a solo climb of Mount Hood via the Cathedral Ridge route in Hood River County. The search was called off Oct. 2.",
+        "link": null,
+        "id": 63
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.728268,
+          45.357332
+        ]
+      },
+      "properties": {
+        "name": "Gerald \"Spike\" Herrmann",
+        "age": "28",
+        "city": "Milwaukie",
+        "state": "OR",
+        "location": "West Slope/Mississippi Head",
+        "month": "April",
+        "year": 1940,
+        "activity": "climbing",
+        "description": "Herrmann's body was found April 3, 1940, eight hours after his climbing partner James \"Jay\" Lorentz, 19, was found alive. The two had summited March 31 but were caught in a bizzard and became disoriented.",
+        "link": null,
+        "id": 64
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.711178,
+          45.355402
+        ]
+      },
+      "properties": {
+        "name": "John Pospisil III",
+        "age": "14",
+        "city": "Gresham",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "July",
+        "year": 1991,
+        "activity": "hiking",
+        "description": "Pospisil and his 12-year-old brother, Luke, lost control during an intentional slide and fell into a canyon while descending Mount Hood during a family outing. John Pospisil was taken by Life Flight Network helicopter to Emanuel Hospital & Health Center",
+        "link": null,
+        "id": 66
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.711915,
+          45.332629
+        ]
+      },
+      "properties": {
+        "name": "George W. Ott",
+        "age": "76",
+        "city": "Corvallis",
+        "state": "OR",
+        "location": "slope above Timberland Lodge",
+        "month": "June",
+        "year": 1990,
+        "activity": "hiking",
+        "description": "Ott's widow, Marian, said she had not expected her husband, who had terminal cancer, to return from a trip he chose to make by himself. Ott had not registered to climb the mountain and had not been reported missing.",
+        "link": null,
+        "id": 67
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.716201,
+          45.33078
+        ]
+      },
+      "properties": {
+        "name": "Thomas Mulholland Funk, Jr.",
+        "age": "18",
+        "city": "Beaverton",
+        "state": "OR",
+        "location": "Timberline Lodge",
+        "month": "February",
+        "year": 1987,
+        "activity": "skiing",
+        "description": "Funk, a member of the Beaverton Ski Team, collided with another skier on Timberline. Funk suffered head trauma and died 2 1/2 months later from brain damage resulting from the accident.",
+        "link": null,
+        "id": 69
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6987,
+          45.372611
+        ]
+      },
+      "properties": {
+        "name": "Arthur Anderson Jr",
+        "age": "59",
+        "city": "Sherwood",
+        "state": "OR",
+        "location": "south side",
+        "month": "July",
+        "year": 1987,
+        "activity": "climbing",
+        "description": "Anderson was killed when he and two other men fell into a bergschrund cravasse.",
+        "link": null,
+        "id": 70
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.697673,
+          45.372197
+        ]
+      },
+      "properties": {
+        "name": "Bill Ward",
+        "age": "49",
+        "city": "Forest Grove",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 2002,
+        "activity": "climbing",
+        "description": "Three groups of climbers -- nine people in all -- fell into a crevasse, or bergschrund on Mount Hood\u2019s south slope.Ward and two others did not survive the fall.",
+        "link": null,
+        "id": 76
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.696673,
+          45.372097
+        ]
+      },
+      "properties": {
+        "name": "Rick Read",
+        "age": "48",
+        "city": "Forest Grove",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 2002,
+        "activity": "climbing",
+        "description": "Three groups of climbers -- nine people in all -- fell into a crevasse, or bergschrund on Mount Hood\u2019s south slope. Read and two others did not survive the fall.",
+        "link": null,
+        "id": 77
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.695673,
+          45.372
+        ]
+      },
+      "properties": {
+        "name": "John Biggs",
+        "age": "62",
+        "city": "Windsor",
+        "state": "CA",
+        "location": "South Slope",
+        "month": "May",
+        "year": 2002,
+        "activity": "climbing",
+        "description": "Three groups of climbers -- nine people in all -- fell into a crevasse, or bergschrund on Mount Hood\u2019s south slope. Biggs and two others did not survive the fall.",
+        "link": null,
+        "id": 78
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.698647,
+          45.373222
+        ]
+      },
+      "properties": {
+        "name": "David Draper",
+        "age": "15",
+        "city": "Vancouver",
+        "state": "WA",
+        "location": "south side (the Chute)",
+        "month": "June",
+        "year": 1959,
+        "activity": "climbing",
+        "description": "A climbing party of Explorer Scouts was caught in a wet snow avalanche as they started their descent from the summit. Two adults and three children were swept into the bottom of a crevasse. Draper was pronounced dead shortly after arriving at Providence",
+        "link": null,
+        "id": 79
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.697923,
+          45.372195
+        ]
+      },
+      "properties": {
+        "name": "Lynn Kaufman",
+        "age": "16",
+        "city": "Larchmont",
+        "state": "NY",
+        "location": "south side (the Chute)",
+        "month": "July",
+        "year": 1956,
+        "activity": "climbing",
+        "description": "Kaufman was tied with 18 other teenagers when they fell into a crevasse.",
+        "link": null,
+        "id": 80
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.66837,
+          45.331144
+        ]
+      },
+      "properties": {
+        "name": "Richard Vincent Meaney",
+        "age": "19",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Mt. Hood Meadows",
+        "month": "January",
+        "year": 1985,
+        "activity": "skiing",
+        "description": "Meaney lost control and skied into a tree in the South Canyon area.",
+        "link": null,
+        "id": 81
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.696923,
+          45.371195
+        ]
+      },
+      "properties": {
+        "name": "Glen O. Gullickson",
+        "age": "20",
+        "city": "Portland",
+        "state": "OR",
+        "location": "south side (the Chute)",
+        "month": "July",
+        "year": 1932,
+        "activity": "climbing",
+        "description": "Gullickson was the last of a party of three descending the Chute when he slipped on ice and fell 800 feet.",
+        "link": null,
+        "id": 82
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.694491,
+          45.373252
+        ]
+      },
+      "properties": {
+        "name": "Carey Cardon",
+        "age": "31",
+        "city": "Hillsboro",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "May",
+        "year": 1999,
+        "activity": "climbing",
+        "description": "Cardon fell while descending the Cooper Spur route on the northeast side of the mountain.",
+        "link": null,
+        "id": 83
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.712814,
+          45.336496
+        ]
+      },
+      "properties": {
+        "name": "Jeff Conley",
+        "age": "21",
+        "city": "Oregon City",
+        "state": "OR",
+        "location": "Magic Mile",
+        "month": "April",
+        "year": 1983,
+        "activity": "skiing",
+        "description": "Died after he collided with another skier on the Magic Mile ski run.",
+        "link": null,
+        "id": 84
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.695491,
+          45.373252
+        ]
+      },
+      "properties": {
+        "name": "Tena Cardon",
+        "age": "29",
+        "city": "Hillsboro",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "May",
+        "year": 1999,
+        "activity": "climbing",
+        "description": "Cardon fell while descending the Cooper Spur route on the northeast side of the mountain.",
+        "link": null,
+        "id": 85
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69369,
+          45.37344
+        ]
+      },
+      "properties": {
+        "name": "Clint Keyes",
+        "age": "29",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Cooper Spur (Chimneys)",
+        "month": "September",
+        "year": 1982,
+        "activity": "climbing",
+        "description": "Keyes was on his way down from the summit when he and two other climbers lost their footing, sending the trio into a crevasse. Keyes died.",
+        "link": null,
+        "id": 86
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.693491,
+          45.373252
+        ]
+      },
+      "properties": {
+        "name": "Bill Pilkenton",
+        "age": "17",
+        "city": "Newberg",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "June",
+        "year": 1981,
+        "activity": "climbing",
+        "description": "Pilkenton died in a fall from Cooper Spur to Eliot Glacier.",
+        "link": null,
+        "id": 87
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.683497,
+          45.374519
+        ]
+      },
+      "properties": {
+        "name": "Charles \"Ole\" Groupe",
+        "age": "16",
+        "city": "Pendleton",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "July",
+        "year": 1994,
+        "activity": "climbing",
+        "description": "Four climbers roped together fell 700 feet down the Cooper Spur climbing route, stopping at the lip of a crevasse on Eliot Glacier. Groupe and Jerry Milton, 51, of McMinnville died. The other climbers were rescued by helicopter",
+        "link": null,
+        "id": 88
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.684497,
+          45.374519
+        ]
+      },
+      "properties": {
+        "name": "Gerald \"Jerry\" Milton",
+        "age": "51",
+        "city": "McMinnville",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "July",
+        "year": 1994,
+        "activity": "climbing",
+        "description": "Four climbers roped together fell 700 feet down the Cooper Spur climbing route, stopping at the lip of a crevasse on Eliot Glacier. Milton and Charles \"Ole\" Groupe died. The other climbers were rescued by helicopter",
+        "link": null,
+        "id": 89
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.691365,
+          45.375363
+        ]
+      },
+      "properties": {
+        "name": "Stewart Picking",
+        "age": "20",
+        "city": null,
+        "state": "OR",
+        "location": "Eliot Glacier",
+        "month": "August",
+        "year": 1978,
+        "activity": "climbing",
+        "description": "Searchers recovered the bodies of Owen and Picking several days after they disappeared near the summit. The two had been roped together while climbing and fell approximately 400 feet. They were recovered at about the 10,100 level.",
+        "link": null,
+        "id": 90
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.692365,
+          45.375363
+        ]
+      },
+      "properties": {
+        "name": "Dan Owen",
+        "age": "21",
+        "city": null,
+        "state": "OR",
+        "location": "Eliot Glacier",
+        "month": "August",
+        "year": 1978,
+        "activity": "climbing",
+        "description": "Searchers recovered the bodies of Owen and Picking several days after they disappeared near the summit. The two had been roped together while climbing and fell approximately 400 feet. They were recovered at about the 10,100 level.",
+        "link": null,
+        "id": 91
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.680279,
+          45.376146
+        ]
+      },
+      "properties": {
+        "name": "Harry B. Carson",
+        "age": "42",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Cooper Spur -Chisholm Trail",
+        "month": "August",
+        "year": 1971,
+        "activity": "climbing",
+        "description": "Harry and Joanne Carson were climbing the mountain with their sons Harry Jr. and Clinton. As they decended below the summit, Clinton slipped and knocked his father off balance. All four fell down the slope and glacier, hitting ice, snow and rocks through",
+        "link": null,
+        "id": 92
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6958220535,
+          45.3587752628056
+        ]
+      },
+      "properties": {
+        "name": "Tasha Amy",
+        "age": "15",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope or east White River Glacier",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "Amy is one of seven students and two adults from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 71
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.681279,
+          45.376146
+        ]
+      },
+      "properties": {
+        "name": "Clinton Carson",
+        "age": "12",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Cooper Spur -Chisholm Trail",
+        "month": "August",
+        "year": 1971,
+        "activity": "climbing",
+        "description": "Harry and Joanne Carson were climbing the mountain with their sons Harry Jr. and Clinton. As they decended below the summit, Clinton slipped and knocked his father off balance. All four fell down the slope and glacier, hitting ice, snow and rocks through",
+        "link": null,
+        "id": 93
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.708537,
+          45.330225
+        ]
+      },
+      "properties": {
+        "name": "Boris Sagal",
+        "age": "57",
+        "city": "Los Angeles",
+        "state": "CA",
+        "location": "Timberline Lodge",
+        "month": "May",
+        "year": 1981,
+        "activity": "walking",
+        "description": "Sagal accidentally walked into the spinning tail rotor of a helicopter.",
+        "link": null,
+        "id": 94
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.701829,
+          45.366831
+        ]
+      },
+      "properties": {
+        "name": "John Southworth",
+        "age": "28",
+        "city": "Cornelius",
+        "state": "OR",
+        "location": "South slope",
+        "month": "April",
+        "year": 1980,
+        "activity": "climbing",
+        "description": "Southworth was airlifted from the south slope of Mount Hood where he and companion Walter Bulowski had been snowbound \u00a0for nearly 3 days. He died less than 6 hours later at Willamette Falls Hospital.",
+        "link": null,
+        "id": 95
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.690129,
+          45.379441
+        ]
+      },
+      "properties": {
+        "name": "Dr. Gary Lee",
+        "age": "55",
+        "city": "Eugene",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "July",
+        "year": 2008,
+        "activity": "climbing",
+        "description": "Lee was climbing with his 20-year-old son, Devin, when a rock dislodged from above and hit him. He was near the 9,000-feet level and knocked 1,000 feet downhill into rock and ice above Eliot Glacier.",
+        "link": "http://blog.oregonlive.com/breakingnews/2008/07/climber_sparks_rescue_effort_o.html",
+        "id": 96
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.708605,
+          45.368475
+        ]
+      },
+      "properties": {
+        "name": "Hugh Hakes",
+        "age": "45",
+        "city": "Olympia",
+        "state": "WA",
+        "location": "Reid Glacier",
+        "month": "June",
+        "year": 1982,
+        "activity": "climbing",
+        "description": "An avalanche on the mountain's southwest flank, at 9,500 feet near Leuthold Couloir and Reid Glacier above Illumination Rock, killed Hugh and injured two from a group of seven mountain climbers.",
+        "link": null,
+        "id": 97
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.718965,
+          45.370951
+        ]
+      },
+      "properties": {
+        "name": "David Mickelson",
+        "age": "18",
+        "city": "Medford",
+        "state": "OR",
+        "location": "Reid Glacier",
+        "month": "September",
+        "year": 1976,
+        "activity": "climbing",
+        "description": "Mickelson slipped on rock and slid several hundred feet to his death in a bergschrund.",
+        "link": null,
+        "id": 98
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.688605,
+          45.368729
+        ]
+      },
+      "properties": {
+        "name": "Frederic Kirn",
+        "age": null,
+        "city": "Portland",
+        "state": "OR",
+        "location": "Newton Clark Glacier",
+        "month": "July",
+        "year": 1896,
+        "activity": "climbing",
+        "description": "Kirn, a Portland grocer, was climbing solo on Mount Hood. He fell to his death on the Newton Clark Glacier.",
+        "link": null,
+        "id": 99
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.676588,
+          45.361313
+        ]
+      },
+      "properties": {
+        "name": "Dr. Richard Selden",
+        "age": "35",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Clark Canyon",
+        "month": "March",
+        "year": 1975,
+        "activity": "skiing",
+        "description": "Selden plunged to his death from a ridge on Mount Hood into Clark Canyon",
+        "link": null,
+        "id": 100
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.688746,
+          45.37681
+        ]
+      },
+      "properties": {
+        "name": "Jim Darby",
+        "age": "35",
+        "city": "Newberg",
+        "state": "OR",
+        "location": "Chisholm Trail",
+        "month": "June",
+        "year": 1981,
+        "activity": "climbing",
+        "description": "Darby is one of five people in a group of climbers to die in a fall from Cooper Spur while descending Mount Hood. The same day, 11 climbers on Mount Rainier were buried under tons of ice during an avalanche.",
+        "link": null,
+        "id": 101
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.739166,
+          45.379945
+        ]
+      },
+      "properties": {
+        "name": "Jack A. Lafeman",
+        "age": "21",
+        "city": "Vancouver",
+        "state": "WA",
+        "location": "Yocum Ridge",
+        "month": "August",
+        "year": 1972,
+        "activity": "climbing",
+        "description": "Lafeman fell 60 feet over a cliff and slid another 200 feet on snow. Explorer Scout crews found his body the next day.",
+        "link": null,
+        "id": 102
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.687752205408,
+          45.3767031463284
+        ]
+      },
+      "properties": {
+        "name": "Garth Westcott",
+        "age": "35",
+        "city": "Bend",
+        "state": "OR",
+        "location": "Chisholm Trail",
+        "month": "June",
+        "year": 1981,
+        "activity": "climbing",
+        "description": "Westcott is one of five people in a group of climbers to die in a fall from Cooper Spur while descending Mount Hood. The same day, 11 climbers on Mount Rainier were buried under tons of ice during an avalanche.",
+        "link": null,
+        "id": 103
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.688119987851,
+          45.37699969299
+        ]
+      },
+      "properties": {
+        "name": "Larry Young",
+        "age": "34",
+        "city": "Corvallis",
+        "state": "OR",
+        "location": "Chisholm Trail",
+        "month": "June",
+        "year": 1981,
+        "activity": "climbing",
+        "description": "Young is one of five people in a group of climbers to die in a fall from Cooper Spur while descending Mount Hood. The same day, 11 climbers on Mount Rainier were buried under tons of ice during an avalanche.",
+        "link": null,
+        "id": 104
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.711206,
+          45.333926
+        ]
+      },
+      "properties": {
+        "name": "Michael Regan",
+        "age": "20's",
+        "city": "Seattle",
+        "state": "WA",
+        "location": "Timberline Lodge",
+        "month": "January",
+        "year": 1971,
+        "activity": "skiing",
+        "description": "Oregon State Police said Regan was apparently skiing in a bizzard on an unmarked trail when he plummeted over an embankement and on to the Timberline road.",
+        "link": null,
+        "id": 105
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.698687,
+          45.35734
+        ]
+      },
+      "properties": {
+        "name": "James L. Eaton",
+        "age": "28",
+        "city": "unknown",
+        "state": "OR",
+        "location": "White River Glacier",
+        "month": "March",
+        "year": 1969,
+        "activity": "skiing",
+        "description": "Eaton fell into a crevasse while skiing down the White River Glacier. Eaton's legs were moving after the fall, but by the time he was rescued he was not breathing.",
+        "link": null,
+        "id": 106
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.698139,
+          45.371323
+        ]
+      },
+      "properties": {
+        "name": "Robert F. Patterson",
+        "age": "32",
+        "city": "Portland",
+        "state": "NY",
+        "location": "Hogsback",
+        "month": "May",
+        "year": 1968,
+        "activity": "climbing",
+        "description": "Patterson was climbing with five others. Shortly after beginning their summit, Patterson became increasingly fatigued and showed signs of hypothermia. The climbing party dug two snow caves on Hogsback for the group. Patterson's cave mates tried to keep h",
+        "link": null,
+        "id": 107
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.779885,
+          45.289275
+        ]
+      },
+      "properties": {
+        "name": "William Stanley Davis",
+        "age": "16",
+        "city": "Lake Oswego",
+        "state": "OR",
+        "location": "Upper Ski Bowl",
+        "month": "February",
+        "year": 1965,
+        "activity": "skiing",
+        "description": "Davis died of injuries he suffered when he struck a tree while skiing at Government Camp.",
+        "link": null,
+        "id": 108
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.6975,
+          45.3575
+        ]
+      },
+      "properties": {
+        "name": "Ronnie T. Myers",
+        "age": "23",
+        "city": "Williams Air Force Base",
+        "state": "AZ",
+        "location": "White River Glacier",
+        "month": "February",
+        "year": 1963,
+        "activity": "flying",
+        "description": "A civilian airplane hit the side of the glacier while on a flight from Portland to Elko, NV.",
+        "link": null,
+        "id": 109
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.687683668692,
+          45.3764155041393
+        ]
+      },
+      "properties": {
+        "name": "George Anderson",
+        "age": "48",
+        "city": "Boring",
+        "state": "OR",
+        "location": "Chisholm Trail",
+        "month": "June",
+        "year": 1981,
+        "activity": "climbing",
+        "description": "Anderson is one of five people in a group of climbers to die in a fall from Cooper Spur while descending Mount Hood. The same day, 11 climbers on Mount Rainier were buried under tons of ice during an avalanche.",
+        "link": null,
+        "id": 110
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.688324790721,
+          45.376614101602
+        ]
+      },
+      "properties": {
+        "name": "Leah Lorenson",
+        "age": "39",
+        "city": "Vancouver",
+        "state": "WA",
+        "location": "Chisholm Trail",
+        "month": "June",
+        "year": 1981,
+        "activity": "climbing",
+        "description": "Lorenson is one of five people in a group of climbers to die in a fall from Cooper Spur while descending Mount Hood. The same day, 11 climbers on Mount Rainier were buried under tons of ice during an avalanche.",
+        "link": null,
+        "id": 111
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.711206,
+          45.334409
+        ]
+      },
+      "properties": {
+        "name": "Lou Ellen Simko",
+        "age": "32",
+        "city": "Portland",
+        "state": "OR",
+        "location": "near Timberline Lodge",
+        "month": "September",
+        "year": 1956,
+        "activity": "hiking",
+        "description": "Simko was hiking with her husband when she stumbled and fell.",
+        "link": null,
+        "id": 112
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.710016,
+          45.366949
+        ]
+      },
+      "properties": {
+        "name": "Donald Welk",
+        "age": "20",
+        "city": "Portland",
+        "state": "OR",
+        "location": "south side (Crater Rock)",
+        "month": "October",
+        "year": 1949,
+        "activity": "climbing",
+        "description": "Welk, a Lewis and Clark student, lost his footing near Crater Rock and fell 3,000 feet down slope. His body was found at the base of Illumination Rock",
+        "link": null,
+        "id": 113
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.724782,
+          45.357242
+        ]
+      },
+      "properties": {
+        "name": "Col. A.Y. Smith",
+        "age": "49",
+        "city": "San Francisco",
+        "state": "CA",
+        "location": "Mississippi Head",
+        "month": "April",
+        "year": 1949,
+        "activity": "flying",
+        "description": "A B-26 bomber disappeared on a flight from Hamilton Field, Calif., to Portland. The bodies of all three victims were recovered in August 1949",
+        "link": null,
+        "id": 114
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.680354,
+          45.381229
+        ]
+      },
+      "properties": {
+        "name": "Patricia Ann Haythorn",
+        "age": "35",
+        "city": "Carlton",
+        "state": "OR",
+        "location": "Eliot Glacier",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "Haythorn and David W. Schermer, 36, slipped off the edge of the mountain near Eliot Glacier. Hawthorn did not survive the fall.",
+        "link": null,
+        "id": 115
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.723268,
+          45.357132
+        ]
+      },
+      "properties": {
+        "name": "Master Sgt. Herman E. Sluga",
+        "age": "35",
+        "city": "San Jose",
+        "state": "CA",
+        "location": "Mississippi Head",
+        "month": "April",
+        "year": 1949,
+        "activity": "flying",
+        "description": "A B-26 bomber disappeared on a flight from Hamilton Field, Calif., to Portland. The bodies of all three victims were recovered in August 1949",
+        "link": null,
+        "id": 116
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.721778,
+          45.32563
+        ]
+      },
+      "properties": {
+        "name": "Bert Suprenant",
+        "age": "23",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Pucci's Glade",
+        "month": "February",
+        "year": 1948,
+        "activity": "skiing",
+        "description": "Suprenant overshot the end of Pucci's Glade. His body was found under a tree just off West Leg Road",
+        "link": null,
+        "id": 117
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.682489,
+          45.375076
+        ]
+      },
+      "properties": {
+        "name": "Helen Lowry",
+        "age": "32",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "September",
+        "year": 1943,
+        "activity": "climbing",
+        "description": "Lowry fell from the top of Copper Spur to Eliot Glacier.",
+        "link": null,
+        "id": 118
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.681354,
+          45.382229
+        ]
+      },
+      "properties": {
+        "name": "Dr. Dan Ravin",
+        "age": "33",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Eliot Glacier",
+        "month": "June",
+        "year": 1983,
+        "activity": "climbing",
+        "description": "Three climbers plunged an estimated 400 feet while climbing near the Eliot Glacier headwall on the mountain's north side. Ravin was fatally injured.",
+        "link": null,
+        "id": 119
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.696758,
+          45.365896
+        ]
+      },
+      "properties": {
+        "name": "Roy M. Varney",
+        "age": "47",
+        "city": "Portland",
+        "state": "OR",
+        "location": "south side",
+        "month": "March",
+        "year": 1938,
+        "activity": "climbing",
+        "description": "Varney and Russell Gueffroy died in a blizzard that trapped a Mazama climbing party of 20",
+        "link": null,
+        "id": 120
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.724095,
+          45.340895
+        ]
+      },
+      "properties": {
+        "name": "Russell Gueffroy",
+        "age": "26",
+        "city": "Vancouver",
+        "state": "WA",
+        "location": "south side (Sand Canyon)",
+        "month": "March",
+        "year": 1938,
+        "activity": "climbing",
+        "description": "Gueffroy and Roy Varney died in a blizzard that trapped a Mazama climbing party of 20.",
+        "link": null,
+        "id": 121
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.697831,
+          45.373283
+        ]
+      },
+      "properties": {
+        "name": "Milton Robert Nelson",
+        "age": "17",
+        "city": "Portland",
+        "state": "OR",
+        "location": "south side (the Chute)",
+        "month": "May",
+        "year": 1938,
+        "activity": "climbing",
+        "description": "Nelson collapsed and died within 200 feet of the summit.",
+        "link": null,
+        "id": 122
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.626892,
+          45.404959
+        ]
+      },
+      "properties": {
+        "name": "Victor Howell",
+        "age": null,
+        "city": null,
+        "state": null,
+        "location": "Cooper Spur ski area",
+        "month": "December",
+        "year": 1936,
+        "activity": "skiing",
+        "description": "Howell's chest was crushed when he lost control while skiing on a new runway on the north side and collided with a tree stump.",
+        "link": null,
+        "id": 123
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69929,
+          45.369273
+        ]
+      },
+      "properties": {
+        "name": "Victor F. Von Normann",
+        "age": "22",
+        "city": "Seattle",
+        "state": "WA",
+        "location": "south side",
+        "month": "August",
+        "year": 1934,
+        "activity": "climbing",
+        "description": "The University of Washington student was descending from the summit on the Hogsback when he and his climbing party came across a fumarole on the east side of Crater Rock. The student tumbled from the brink to the bottom, 250 feet below. Steam and suffoca",
+        "link": null,
+        "id": 124
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.680354,
+          45.380229
+        ]
+      },
+      "properties": {
+        "name": "David H. Turple",
+        "age": "51",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Cooper Spur",
+        "month": "June",
+        "year": 1981,
+        "activity": "climbing",
+        "description": "Turple died in a fall from Cooper Spur to Eliot Glacier.",
+        "link": null,
+        "id": 125
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.659551,
+          45.399083
+        ]
+      },
+      "properties": {
+        "name": "Suwanna Springer",
+        "age": "24",
+        "city": "Los Angeles",
+        "state": "CA",
+        "location": "Eliot Creek",
+        "month": "July",
+        "year": 1930,
+        "activity": "riding",
+        "description": "Springer was horseback riding when the horse slipped on a planked bridge.",
+        "link": null,
+        "id": 126
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69497,
+          45.363363
+        ]
+      },
+      "properties": {
+        "name": "Leslie Brownlee",
+        "age": "20 or 21",
+        "city": "Portland",
+        "state": "OR",
+        "location": "south side (Triangle Moraine)",
+        "month": "January",
+        "year": 1927,
+        "activity": "climbing",
+        "description": "Brownlee became separated from climbing partner Al Feyerabend. He was last seen below Crater Rock at Triangle Moraine. He has never been found.",
+        "link": null,
+        "id": 127
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69452,
+          45.383451
+        ]
+      },
+      "properties": {
+        "name": "Ricard B. Chu",
+        "age": "24",
+        "city": null,
+        "state": null,
+        "location": "Coe Glacier",
+        "month": "August",
+        "year": 1974,
+        "activity": "climbing",
+        "description": "Chu jumped and landed on the overhanging edge of a crevasse. The lip broke away, and Chu fell to the bottom of the crevasse. It took four men 20 minutes to dig him out of the snow and ice.",
+        "link": null,
+        "id": 128
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.678905,
+          45.375785
+        ]
+      },
+      "properties": {
+        "name": "Barbara Drum",
+        "age": "35",
+        "city": "unknown",
+        "state": null,
+        "location": "Cooper Spur",
+        "month": "September",
+        "year": 1924,
+        "activity": "climbing",
+        "description": "Drum was part of a climbing party that was removing fixed rope near Cooper Spur. She was struck by rock during her descent Sept. 3. She died Sept. 16 in the Hood River hospital of her injuries. She is the first recorded female victim of the mountain.",
+        "link": null,
+        "id": 129
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69552,
+          45.384451
+        ]
+      },
+      "properties": {
+        "name": "Dr. Stanton W. Stryker",
+        "age": "62",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Coe Glacier",
+        "month": "July",
+        "year": 1927,
+        "activity": "climbing",
+        "description": "Stryker was part of the Mazama Annual Climbing party. A group of 10 climbers fell 600 feet from Coe Glacier. Eight climbers were injured. Stryker's alpenstock struck him in the chest during the fall. He died on his way down the mountain from his injury.",
+        "link": null,
+        "id": 130
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.711178,
+          45.334771
+        ]
+      },
+      "properties": {
+        "name": "Bernard the soldier",
+        "age": null,
+        "city": null,
+        "state": null,
+        "location": "unknown",
+        "month": null,
+        "year": 1883,
+        "activity": "climbing",
+        "description": "A member of a government supply party camped at Timberline, the soldier disappeared after expressing a \"great curiosity\" about climbing the mountain. No one knows if Bernard was a deserter or the first recorded victim of the mountain. Bernard was station",
+        "link": null,
+        "id": 131
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.694491,
+          45.372252
+        ]
+      },
+      "properties": {
+        "name": "Sebastian Kinasiewicz",
+        "age": "32",
+        "city": "Poland",
+        "state": "Poland",
+        "location": "Climbers Left Chute",
+        "month": "August",
+        "year": 2013,
+        "activity": "climbing",
+        "description": "Kinasiewicz, a member of the Polish military, fell 2,000 feet from near the summit into a couloir called Climbers Left Chute on the north face of the mountain. His body was found at the 9,100-foot level.",
+        "link": "http://www.oregonlive.com/pacific-northwest-news/index.ssf/2013/08/body_of_polish_climber_found_o.html",
+        "id": 15
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.710444,
+          45.346494
+        ]
+      },
+      "properties": {
+        "name": "Christine L. Cato",
+        "age": "16",
+        "city": "Portland",
+        "state": "OR",
+        "location": "Palmer snowfield",
+        "month": "July",
+        "year": 1989,
+        "activity": "spectator",
+        "description": "A runaway Sno-Cat struck and killed Cato during a snowboarding competition above Timberline Lodge at the 7,500 foot level.",
+        "link": "https://shredhood.com/2015/01/05/racers-families-and-friends-bid-a-fond-farewell-to-the-cato-memorial-on-mount-hood/",
+        "id": 68
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.695280749771,
+          45.3584300453217
+        ]
+      },
+      "properties": {
+        "name": "Patrick Francis McGinness",
+        "age": "15",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "McGinness is one of seven students and two adults from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 55
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.695526420703,
+          45.3589902313776
+        ]
+      },
+      "properties": {
+        "name": "Susan Elizabeth McClave",
+        "age": "17",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "McClave is one of seven students and two adults from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 56
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.692832812147,
+          45.3441379836272
+        ]
+      },
+      "properties": {
+        "name": "Marion Horwell",
+        "age": "41",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "Horwell is one of two adults and seven students from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 57
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.696444120274,
+          45.3585319824352
+        ]
+      },
+      "properties": {
+        "name": "Richard Haeder",
+        "age": "16",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "Haeder is one of seven students and two adults from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 65
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.693034225663,
+          45.3445001741601
+        ]
+      },
+      "properties": {
+        "name": "Alison Litzenberger",
+        "age": "15",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "Litzenberger is one of seven students and two adults from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 72
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.695919615339,
+          45.3580486133802
+        ]
+      },
+      "properties": {
+        "name": "Erin O'Leary",
+        "age": "15",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "O'Leary is one of seven students and two adults from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 73
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.69614906758,
+          45.359297
+        ]
+      },
+      "properties": {
+        "name": "Erik Sandvik",
+        "age": "15",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "Sandvik is one of seven students and two adults from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 74
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.696586043634,
+          45.3587985204071
+        ]
+      },
+      "properties": {
+        "name": "The Rev. Thomas Goman",
+        "age": "41",
+        "city": "Portland",
+        "state": "OR",
+        "location": "South Slope",
+        "month": "May",
+        "year": 1986,
+        "activity": "climbing",
+        "description": "Goman is one of two adults and seven students from the Oregon Episcopal School to freeze to death after being trapped in a whiteout while ascending Mount Hood.",
+        "link": "https://www.outsideonline.com/2357451/mount-hood-disaster-1986",
+        "id": 75
+      }
+    }
+  ]
+}
